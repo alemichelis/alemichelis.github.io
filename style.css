@@ -86,6 +86,23 @@ a {
 .info{
     margin: -120px 0px 0px 0px;
 }
+
+button {
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 29px 248px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .pdf{
+    margin: 39px -43px 27px -148px;
+  }
 /* 
 /* 
 a{
