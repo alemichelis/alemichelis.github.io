@@ -1,283 +1,594 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Michelis CV Online</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/modals/">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Alejandro Michelis</title>
+    <meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template, Portfolio" />
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts  -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+    <!-- Body font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <!-- Navbar font -->
+
+    <!-- Libs and Plugins CSS -->
+    <link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="inc/animations/css/animate.min.css">
+    <link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons -->
+    <link rel="stylesheet" href="inc/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="inc/owl-carousel/css/owl.theme.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="css/skin/cool-gray.css">
+    <!-- <link rel="stylesheet" href="css/skin/ice-blue.css"> -->
+    <!-- <link rel="stylesheet" href="css/skin/summer-orange.css"> -->
+    <!-- <link rel="stylesheet" href="css/skin/fresh-lime.css"> -->
+    <!-- <link rel="stylesheet" href="css/skin/night-purple.css"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#main-navbar">
+    <div class="page-loader"></div> <!-- Display loading image while page loads -->
+    <div class="body">
 
-    <header class="header">
-        <div class="logo">
-            <!-- <h1>ALEJANDRO SEBASTIAN MICHELIS</h1> -->
-            <img src="imagenes/name.png" alt="">
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index-responsive.html">SMARTPHONE VERSION</a></li>
-                <li><a href="#bio">BIO</a></li>
-                <li><a href="#work">WORK EXPERIENCE</a></li>
-                <li><a href="#studies">STUDIES</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#ref">REFERENCES</a></li>
-                <li><a href="#links">LINKS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
-      
-<div class="main">
-    <div class="animate__animated animate__backInLeft">
-    <div class="info" id="bio">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>Designer, Frontend Developer, UX-UI</h2>
-        <h5>Born date: 06/12/1984</h5>
-        <h5>Residence: Argentina.</h5>
-        <h5>Nationality: Argentine/Greece.</h5>
-        <h5>Passports: Greek.<br>
-            Argentine with USA VISA B1.</h5>
-        </div>
-        </div>
+        <!--========== BEGIN HEADER ==========-->
+        <header id="header" class="header-main">
 
-        <div class="">
-        <div>
-            <img src="imagenes/alejandro.jpg" alt="" class="imagen1">
-        </div>
-    </div>
+            <!-- Begin Navbar -->
+            <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <!-- Classes: navbar-default, navbar-inverse, navbar-fixed-top, navbar-fixed-bottom, navbar-transparent. Note: If you use non-transparent navbar, set "height: 98px;" to #header -->
+
+                <div class="container">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Alejandro Michelis</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand page-scroll" href="index.html">Alejandro Michelis</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="page-scroll" href="body">Bio</a></li>
+                            <li><a class="page-scroll" href="#about-section">Work</a></li>
+                            <li><a class="page-scroll" href="#studies-section">Studies</a></li>
+                            <li><a class="page-scroll" href="#portfolio-section">Skills</a></li>
+                            <li><a class="page-scroll" href="#references-section">References</a></li>
+                            <li><a class="page-scroll" href="#links-section">Links</a></li>
+                            <li><a class="page-scroll" href="#contact-section">Contact</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container -->
+            </nav>
+            <!-- End Navbar -->
+
+        </header>
+        <!-- ========= END HEADER =========-->
 
 
-<div class="animate__animated animate__backInRight">
-    <div class="works" id="work">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>Work Experience</h2>
-        <h3>June 2022 - Present</h3>
-        <h5>Designer, Frontend, UX-UI in <br>Seabury Solutions.</h5>
-        <p>Working with HTML5, CSS3, JavaScript with<br>
-            Visual Studio Code</p>
-        <p>(Node.js and Angular). Working with <br>Figma/Miro/Adobe.</p>
-        <br>
-        <br>
-        <h3>Oct 2018 - Present</h3>
-        <h5>Designer, UX-UI, Frontend - <br>Freelance.</h5>
-        <p>Working with HTML5, CSS3, JavaScript, C++, C#</p>
-        <p>Working projects in Unity and Unreal Engine.</p>
-        <br>
-        <br>
-        <h3>Jun 2015 - Sep 2018</h3>
-        <h5>Design and Marketing online in <br>First Rate,<br>
-            Someco, Music-co and Bodegas <br>Iaccarini.</h5>
-        <p>Working for brands like Yelmo, Ultracomb, Peavey,<br>
-            SKP for Mercadolibre and other online platforms.</p>
-            <br>
-            <br>
-        <h3>Dic 2011 - Jun 2015</h3>
-        <h5>Designer in Tio Musa</h5>
-        <p>Branding, SEO, and Graphic design with Fireworks,<br>
-            Photoshop, Illustrator, etc. Community Manager<br>
-            fanpage of Tio Musa.</p>
-        </div>
-    </div>
 
-    <div id="logo-soft">
-            <div class="angular">
-                <img src="imagenes/angular_logo.png" alt="">
+
+        <!-- Begin text carousel intro section -->
+        <section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5"
+            style="background-image: url(img/slider-bg.jpg);">
+
+            <div class="container">
+                <div class="caption text-center text-white" data-stellar-ratio="0.7">
+
+                    <div id="owl-intro-text" class="owl-carousel">
+                        <div class="item">
+                            <h2>Designer, Frontend Developer, UX-UI</h2>
+                            <br>
+                            <p>Born date: 06/12/1984 <br>
+                                Residence: Argentina.<br>
+                                Nationality: Argentine and Greek.<br>
+                                Passports: Argentine and Greek.<br>
+                            <div class="extra-space-l"></div>
+                        </div>
+
+                    </div>
+
+                </div> <!-- /.caption -->
+            </div> <!-- /.container -->
+
+        </section>
+        <!-- End text carousel intro section -->
+
+
+
+
+        <!-- Begin about section -->
+        <section id="about-section" class="page bg-style1">
+            <!-- Begin page header-->
+            <div class="page-header-wrapper">
+                <div class="container">
+                    <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                        <h2>Work Experience</h2>
+
+                    </div>
+                </div>
             </div>
-            <div class="figma">
-                <img src="imagenes/figma-logo.png" alt="">
+            <!-- End page header-->
+
+            <!-- Begin rotate box-1 -->
+            <div class="rotate-box-1-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+                                <span class="rotate-box-icon"><i class="fa fa-plane"></i></span>
+                                <div class="rotate-box-info">
+                                    <h4>June 2022 - Present</h4><br>
+                                    <p>Designer, Frontend, UX-UI <br>
+                                        in Seabury Solutions.<br>
+                                        <br>
+                                        Working with HTML5, CSS3, JavaScript<br>
+                                        with Visual Studio Code.<br>
+
+                                        (Node.js and Angular). Working with<br>
+                                        Figma/Miro/Adobe.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.2s">
+                                <span class="rotate-box-icon"><i class="fa fa-wordpress"></i></span>
+                                <div class="rotate-box-info">
+                                    <h4>October 2018 - Present</h4><br>
+                                    <p>Designer, UX-UI, Frontend -<br>
+                                        Freelance.<br>
+                                        <br>
+                                        Working with HTML5, CSS3, JavaScript, C++, C#<br>
+
+                                        Working projects in Unity and Unreal Engine.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.4s">
+                                <span class="rotate-box-icon"><i class="fa fa-shopping-cart"></i></span>
+                                <div class="rotate-box-info">
+                                    <h4>June 2015 - September 2018</h4><br>
+                                    <p>Design and Marketing online<br>
+                                        in First Rate, Someco, <br>
+                                        Music-co and Bodegas<br>
+                                        Iaccarini.<br>
+                                        <br>
+                                        Working for brands like Yelmo, Ultracomb, Peavey,
+                                        <br>
+                                        SKP for Mercadolibre and other online platforms.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.6s">
+                                <span class="rotate-box-icon"><i class="fa fa-file-word-o"></i></span>
+                                <div class="rotate-box-info">
+                                    <h4>December 2011 - June 2015</h4><br>
+                                    <p>Designer in Tio Musa<br>
+                                        <br>
+                                        Branding, SEO, and Graphic design with Fireworks,<br>
+                                        Photoshop, Illustrator, etc. Community Manager<br>
+                                        fanpage of Tio Musa.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
             </div>
-            <div class="vscode">
-                <img src="imagenes/visualstudiocode-logo.png" alt="">
+            <!-- End rotate box-1 -->
+
+            <div class="extra-space-l"></div>
+
+
+        </section>
+        <!-- End about section -->
+
+
+
+
+
+
+
+
+        <!-- Begin Studies -->
+        <section id="studies-section">
+            <div id="testimonial-trigger" class="testimonial text-white parallax" data-stellar-background-ratio="0.5"
+                style="background-image: url(img/testimonial-bg.jpg);">
+                <div class="cover"></div>
+                <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <h2>Studies</h2>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End page header-->
+                <div class="container">
+                    <div class="testimonial-inner center-block text-center">
+                        <div id="owl-testimonial" class="owl-carousel">
+                            <div class="item">
+                                <blockquote>
+                                    <p>Apr 2021 - Jul 2021</p>
+                                    <p>Coderhouse.</p>
+                                    <p>UX-UI.</p>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote>
+                                    <p>Nov 2021 - Dic 2021</p>
+                                    <p>Swift, Ecmascript 6, Python</p>
+                                    <p>Pirple.</p>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote>
+                                    <p>Apr 2015 - Oct 2015</p>
+                                    <p>Web and Mobile Responsive and Photoshop</p>
+                                    <p>Da Vinci.</p>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote>
+                                    <p>March 2012 - Apr 2012</p>
+                                    <p>Marketing online for facebook</p>
+                                    <p>Facultad de Ciencias Económicas de Buenos Aires.</p>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote>
+                                    <p>Sep 2011 - Dic 2011</p>
+                                    <p>After Effects</p>
+                                    <p>Da Vinci.</p>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote>
+                                    <p>March 2006 - Oct 2006</p>
+                                    <p>Web Design</p>
+                                    <p>IAC Argentine</p>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote>
+                                    <p>March 1998 - Nov 2002</p>
+                                    <p>High School</p>
+                                    <p>Instituto Calasancio Divina Pastora</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="vue">
-                <img src="imagenes/vue-logo.png" alt="">
+        </section>
+        <!-- End Studies -->
+
+
+
+
+
+
+        <!-- Begin Portfolio -->
+        <section id="portfolio-section" class="page bg-style1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="portfolio">
+                            <!-- Begin page header-->
+                            <div class="page-header-wrapper">
+                                <div class="container">
+                                    <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                                        <h2>Skills</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End page header-->
+                            <div class="portfoloi_content_area">
+
+                                <div class="portfolio_content">
+                                    <div class="row" id="portfolio">
+                                        <div class="col-xs-12 col-sm-4 appsDevelopment">
+                                            <div class="portfolio_single_content">
+                                                <img src="img/portfolio/p1.jpg" alt="title" />
+                                                <div>
+                                                    <a href="#">Frontend</a>
+                                                    <span>Angular</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 GraphicDesign">
+                                            <div class="portfolio_single_content">
+                                                <img src="img/portfolio/p2.jpg" alt="title" />
+                                                <div>
+                                                    <a href="#">Frontend</a>
+                                                    <span>React</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 responsive">
+                                            <div class="portfolio_single_content">
+                                                <img src="img/portfolio/p3.jpg" alt="title" />
+                                                <div>
+                                                    <a href="#">Frontend</a>
+                                                    <span>Vue</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 webDesign websites">
+                                            <div class="portfolio_single_content">
+                                                <img src="img/portfolio/p4.jpg" alt="title" />
+                                                <div>
+                                                    <a href="#">Design</a>
+                                                    <span>Photoshop</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 appsDevelopment websites">
+                                            <div class="portfolio_single_content">
+                                                <img src="img//portfolio/p5.jpg" alt="title" />
+                                                <div>
+                                                    <a href="#">Design</a>
+                                                    <span>Illustrator</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 GraphicDesign">
+                                            <div class="portfolio_single_content">
+                                                <img src="img/portfolio/p6.jpg" alt="title" />
+                                                <div>
+                                                    <a href="#">Design</a>
+                                                    <span>Figma</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 responsive">
+                                            <div class="portfolio_single_content">
+                                                <img src="img/portfolio/p7.jpg" alt="title" />
+                                                <div>
+                                                    <a href="#">Backend</a>
+                                                    <span>Node.js</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 GraphicDesign">
+                                            <div class="portfolio_single_content">
+                                                <img src="img/portfolio/p8.jpg" alt="title" />
+                                                <div>
+                                                    <a href="#">Video Games</a>
+                                                    <span>Unreal Engine</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 websites">
+                                            <div class="portfolio_single_content">
+                                                <img src="img/portfolio/p9.jpg" alt="title" />
+                                                <div>
+                                                    <a href="#">Video Games</a>
+                                                    <span>Unity</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="react">
-                <img src="imagenes/react-logo.png" alt="">
+        </section>
+        <!-- End portfolio -->
+
+
+
+
+        <!-- Begin References -->
+        <section id="references-section">
+            <div id="testimonial-trigger" class="testimonial text-white parallax" data-stellar-background-ratio="0.5"
+                style="background-image: url(img/testimonial-bg.jpg);">
+                <div class="cover"></div>
+                <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <h2>References</h2>
+                            <br>
+                            <h3>Tio Musa</h3>
+                            <p>Alberto Chaia</p>
+                            <p>Contact: ventas@tiomusa.com.ar / 46323333</p>
+                            <br>
+                            <br>
+                            <h3>Someco</h3>
+                            <p>Facundo Mendez Collado</p>
+                            <p>Contact: fmendez@someco.com.ar / 1168173540</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End page header-->
+
             </div>
-            <div class="node">
-                <img src="imagenes/node-logo.png" alt="">
+        </section>
+        <!-- End References -->
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Begin Links -->
+        <section id="links-section">
+            <!-- Begin page header-->
+            <div class="page-header-wrapper">
+                <div class="container">
+                    <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                        <h2>Links</h2>
+                        <p class="subtitle"></p>
+                    </div>
+                </div>
             </div>
-        </div>
+            <!-- End page header-->
 
-
-    <div class="studie" id="studies">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>Studies</h2>
-        <h3>Apr 2021 - Jul 2021</h3>
-        <p>UX-UI</p>
-        <p>Coderhouse.</p>
-        <br>
-        <br>
-        <h3>Nov 2021 - Dic 2021</h3>
-        <p>Swift, Ecmascript 6, Python</p>
-        <p>Pirple.</p>
-        <br>
-        <br>
-        <h3>Apr 2015 - Oct 2015</h3>
-        <p>Web and Mobile Responsive and Photoshop</p>
-        <p>Da Vinci.</p>
-        <br>
-        <br>
-        <h3>March 2012 - Apr 2012</h3>
-        <p>Marketing online for facebook</p>
-        <p>Facultad de Ciencias Económicas de Buenos Aires.</p>
-        <br>
-        <br>
-        <h3>Sep 2011 - Dic 2011</h3>
-        <p>After Effects</p>
-        <p>Da Vinci</p>
-        <br>
-        <br>
-        <h3>March 2006 - Oct 2006</h3>
-        <p>Web Design</p>
-        <p>IAC Argentine</p>
-        <br>
-        <br>
-        <h3>March 1998 - Nov 2002</h3>
-        <p>High School</p>
-        <p>Instituto Calasancio Divina Pastora</p>
-        <p>Argentina</p>
-    </div>
-
-    <div id="logo-soft-dos">
-        <div class="html-cinco">
-            <img src="imagenes/html5-logo.png" alt="">
-        </div>
-        <div class="css-tres">
-            <img src="imagenes/css3-logo.png" alt="">
-        </div>
-        <div class="types">
-            <img src="imagenes/typescript-logo.png" alt="">
-        </div>
-        <div class="javascript">
-            <img src="imagenes/javascript-logo.png" alt="">
-        </div>
-    </div>
-
-    <div class="skill" id="skills">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>Other skills</h2>
-
-        <h3>English:</h3>
-        <p>Intermediate.</p>
-        <br>
-        <h3>Adobe:</h3>
-        <p>Photoshop, Fireworks, Premiere, After Effects,<br>
-            Blender, 3d Studio.</p>
-            <br>
-        <h3>Cubase:</h3>
-        <p>Music Production.</p>
-    </div>
-
-    <div id="logo-soft-tres">
-        <div class="psd">
-            <img src="imagenes/psd-logo.png" alt="">
-        </div>
-        <div class="after">
-            <img src="imagenes/after-effects-logo.png" alt="">
-        </div>
-        <div class="blender">
-            <img src="imagenes/blender_logo.png" alt="">
-        </div>
-        <div class="cubase">
-            <img src="imagenes/cubase-logo.png" alt="">
-        </div>
-    </div>
-
-    <div class="refe" id="ref">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>References</h2>
-
-        <h3>Tio Musa</h3>
-        <h5>Alberto Chaia</h5>
-        <p>Contact: ventas@tiomusa.com.ar / 46323333</p>
-        <br>
-        <h3>Someco</h3>
-        <h5>Facundo Mendez Collado</h5>
-        <p>Contact: fmendez@someco.com.ar / 1168173540</p>
-    </div>
-
-    <div id="logo-soft-cuatro">
-        <div class="tiomusa">
-            <img src="imagenes/tiomusa-logo.png" alt="">
-        </div>
-        <div class="someco">
-            <img src="imagenes/someco.png" alt="">
+            <div class="container">
+                <ul class="social-list">
+                    <li> <a href="https://www.linkedin.com/in/alejandromichelis/" target="_blank" class="rotate-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.3s"><span
+                                class="rotate-box-icon"><i class="fa fa-linkedin"></i></span></a></li>
+                    <li> <a href="https://www.behance.net/alejandromichelis" target="_blank" class="rotate-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.4s"><span
+                                class="rotate-box-icon"><i class="fa fa-behance"></i></span></a></li>
+                    <li> <a href="https://github.com/alemichelis" target="_blank" class="rotate-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.5s"><span
+                                class="rotate-box-icon"><i class="fa fa-github"></i></span></a></li>
+                                
+                </ul>
             </div>
-        </div>
 
-    <div class="link" id="links">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>Links:</h2>
-        <a href="https://www.linkedin.com/in/alejandromichelis" target="_blank"><h4>Linkedin</h4></a>
-        <a href="https://www.behance.net/alejandromichelis" target="_blank"><h4>Behance</h4></a>
-        <a href="https://github.com/alemichelis" target="_blank"><h4>Github</h4></a>
-    </div>
+        </section>
+        <!-- End Links section -->
 
-    <div class="contacts" id="contact">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>Contact</h2>
-        <h5>Mobile: (+549)1151426931 </h5>
-        <h5>Email: alemichelis84@gmail.com</h5>
-    </div>
 
-    <div class="pdf">
-        <a href="cv-alejandro-sebastian-michelis.pdf" download>
-            <button>Download PDF CV</button>
-          </a>
-        </div>
-    
-</div>
 
-    <footer>
-        <h5 class="footer-text">Created by Alejandro Michelis</h5>
-    </footer>
 
-    <script>
+        <!-- Begin contact section -->
+        <section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5"
+            style="background-image: url(img/map-bg.jpg);">
+            <div class="cover"></div>
 
-    </script>
+            <!-- Begin page header-->
+            <div class="page-header-wrapper">
+                <div class="container">
+                    <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                        <h2>Contact</h2>
+                        <p class="subtitle"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- End page header-->
+
+            <div class="contact wow bounceInRight" data-wow-delay="0.4s">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <div class="contact-info">
+                                <h4></h4>
+                                <ul class="contact-address">
+                                    <li><i class="fa fa-print"></i>&nbsp; (+549)1151426931</li>
+                                    <li><i class="fa fa-envelope"></i> alemichelis84@gmail.com</li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+        </section>
+        <!-- End contact section -->
+
+        <!-- Begin cta -->
+        <section id="cta-section">
+            <div class="cta">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-9">
+                            <h1>Download CV</h1>
+                            <p></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <!-- <div class="cta-btn wow bounceInRight" data-wow-delay="0.4s"> -->
+                            <a class="btn btn-default btn-lg" href="cv-alejandro-sebastian-michelis.pdf" download target="_blank" role="button">Download</a>
+                            <!-- </div> -->
+                        </div>
+
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+
+        </section>
+        <!-- End cta -->
+
+
+
+
+        <!-- Begin footer -->
+        <footer class="text-off-white">
+
+            <div class="footer">
+                <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                    <p class="copyright">Copyright &copy; 2023 - Designed By <a
+                            href="https://www.linkedin.com/in/alejandromichelis" class="theme-author">Alejandro
+                            Michelis</a></p>
+                </div>
+            </div>
+
+        </footer>
+        <!-- End footer -->
+
+        <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- Scroll to top button -->
+
+    </div><!-- body ends -->
+
+
+
+
+    <!-- Plugins JS -->
+    <script src="inc/jquery/jquery-1.11.1.min.js"></script>
+    <script src="inc/bootstrap/js/bootstrap.min.js"></script>
+    <script src="inc/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="inc/stellar/js/jquery.stellar.min.js"></script>
+    <script src="inc/animations/js/wow.min.js"></script>
+    <script src="inc/waypoints.min.js"></script>
+    <script src="inc/isotope.pkgd.min.js"></script>
+    <script src="inc/classie.js"></script>
+    <script src="inc/jquery.easing.min.js"></script>
+    <script src="inc/jquery.counterup.min.js"></script>
+    <script src="inc/smoothscroll.js"></script>
+
+    <!-- Theme JS -->
+    <script src="js/theme.js"></script>
 
 </body>
+
 
 </html>
