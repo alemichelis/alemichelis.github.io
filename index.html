@@ -8,8 +8,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -41,39 +42,71 @@
 
   <!-- ========= HERO ========= -->
   <section class="hero">
-    <div class="hero-kicker">
-      <span data-es="Currículum" data-en="Curriculum Vitae">Currículum</span>
-      <span>·</span>
-      <span>BUENOS AIRES, AR</span>
+
+    <div class="hero-content">
+      <div class="hero-kicker">
+        <span data-es="Currículum" data-en="Curriculum Vitae">Currículum</span>
+        <span>·</span>
+        <span>BUENOS AIRES, AR</span>
+      </div>
+
+      <h1 class="hero-name">
+        Alejandro<br>
+        <em>Michelis</em>
+      </h1>
+
+      <p class="hero-title fade-switch">
+        <strong data-es="Senior Web Designer · Full Stack Developer · UX/UI Designer." data-en="Senior Web Designer · Full Stack Developer · UX/UI Designer.">Senior Web Designer · Full Stack Developer · UX/UI Designer.</strong>
+        <span data-es=" 15+ años diseñando y construyendo producto digital — del branding al código productivo, con foco en experiencias rápidas, accesibles y memorables."
+              data-en=" 15+ years designing and shipping digital product — from branding to production code, with a focus on fast, accessible and memorable experiences.">
+          15+ años diseñando y construyendo producto digital — del branding al código productivo, con foco en experiencias rápidas, accesibles y memorables.
+        </span>
+      </p>
+
+      <div class="hero-meta">
+        <a href="mailto:alemichelis84@gmail.com" class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          alemichelis84@gmail.com
+        </a>
+        <a href="tel:+5491151426931" class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +54 9 11 5142 6931
+        </a>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Argentina
+        </span>
+      </div>
     </div>
 
-    <h1 class="hero-name">
-      Alejandro<br>
-      <em>Michelis</em>
-    </h1>
+    <!-- 3D Avatar — drop avatar.glb in img/ to activate -->
+    <!-- <div class="hero-3d" aria-hidden="true">
+      <model-viewer
+        src="./img/code.glb"
+        alt="Avatar 3D Alejandro Michelis"
+        auto-rotate
+        auto-rotate-delay="0"
+        rotation-per-second="20deg"
+        camera-controls
+        disable-zoom
+        shadow-intensity="0.8"
+        shadow-softness="1"
+        environment-image="neutral"
+        exposure="1.1"
+        camera-orbit="0deg 90deg auto"
+        interaction-prompt="none"
+      >
+        <div slot="poster" class="hero-3d-poster">
+          <div class="hero-3d-ring"></div>
+          <svg class="hero-3d-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="28" r="14" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 68c0-15.464 12.536-28 28-28s28 12.536 28 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="hero-3d-label" data-es="Avatar 3D · Próximamente" data-en="3D Avatar · Coming Soon">Avatar 3D · Próximamente</span>
+        </div>
+      </model-viewer>
+    </div> -->
 
-    <p class="hero-title fade-switch">
-      <strong data-es="Senior Web Designer · Full Stack Developer · UX/UI Designer." data-en="Senior Web Designer · Full Stack Developer · UX/UI Designer.">Senior Web Designer · Full Stack Developer · UX/UI Designer.</strong>
-      <span data-es=" 15+ años diseñando y construyendo producto digital — del branding al código productivo, con foco en experiencias rápidas, accesibles y memorables."
-            data-en=" 15+ years designing and shipping digital product — from branding to production code, with a focus on fast, accessible and memorable experiences.">
-        15+ años diseñando y construyendo producto digital — del branding al código productivo, con foco en experiencias rápidas, accesibles y memorables.
-      </span>
-    </p>
-
-    <div class="hero-meta">
-      <a href="mailto:alemichelis84@gmail.com" class="hero-meta-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        alemichelis84@gmail.com
-      </a>
-      <a href="tel:+5491151426931" class="hero-meta-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        +54 9 11 5142 6931
-      </a>
-      <span class="hero-meta-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Argentina
-      </span>
-    </div>
   </section>
 
   <!-- ========= MAIN GRID ========= -->
@@ -375,9 +408,315 @@
         </div>
       </div>
 
+      <!-- ========= SELECTED WORK ========= -->
+      <div class="section">
+        <div class="section-label"><span class="section-label-num">06</span> <span data-es="Trabajos seleccionados" data-en="Selected work">Trabajos seleccionados</span></div>
+        <h2 class="section-title">
+          <span data-es="Casos" data-en="Featured">Casos</span>
+          <em data-es="destacados" data-en="case studies">destacados</em>
+        </h2>
+
+        <!-- Filters -->
+        <div class="work-filters" role="tablist" aria-label="Filtrar proyectos">
+          <button class="work-filter on" data-filter="all" data-es="Todos" data-en="All">Todos</button>
+          <button class="work-filter" data-filter="web" data-es="Web · App" data-en="Web · App">Web · App</button>
+          <button class="work-filter" data-filter="unreal" data-es="Unreal · 3D" data-en="Unreal · 3D">Unreal · 3D</button>
+          <button class="work-filter" data-filter="design" data-es="UX · Diseño" data-en="UX · Design">UX · Diseño</button>
+          <button class="work-filter" data-filter="oss" data-es="Open source" data-en="Open source">Open source</button>
+        </div>
+
+        <div class="work-grid">
+
+          <!-- 1. INTEATRO -->
+          <article class="work-card" data-tags="web design">
+            <div class="work-media">
+              <div class="work-media-cover work-cover-inteatro" aria-label="INTEATRO institutional site preview">
+                <div class="work-cover-tag">inteatro.gob.ar</div>
+              </div>
+              <span class="work-media-badge" data-es="Web institucional" data-en="Institutional web">Web institucional</span>
+            </div>
+            <div class="work-body">
+              <div class="work-header-row">
+                <h3 class="work-title">INT — Instituto Nacional del Teatro</h3>
+                <span class="work-year">2025 →</span>
+              </div>
+              <p class="work-desc"
+                 data-es="Plataforma institucional del Estado Nacional. Frontend, backend PHP/MySQL, API REST, visor de PDF, autenticación y panel de administración de actas."
+                 data-en="Argentine National Government institutional platform. Frontend, PHP/MySQL backend, REST API, PDF viewer, authentication and admin panel.">
+                Plataforma institucional del Estado Nacional. Frontend, backend PHP/MySQL, API REST, visor de PDF, autenticación y panel de administración de actas.
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">PDF.js</span>
+                <span class="tech-tag">WordPress</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-btn primary" href="https://inteatro.gob.ar/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span data-es="Ver sitio" data-en="Visit site">Ver sitio</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. APRA -->
+          <article class="work-card" data-tags="web design">
+            <div class="work-media">
+              <div class="work-media-cover work-cover-apra" aria-label="APRA evaluation platform preview">
+                <div class="work-cover-tag">apracec.com.ar</div>
+              </div>
+              <span class="work-media-badge" data-es="Plataforma médica" data-en="Healthcare platform">Plataforma médica</span>
+            </div>
+            <div class="work-body">
+              <div class="work-header-row">
+                <h3 class="work-title" data-es="APRA — Asociación de Perfusionistas" data-en="APRA — Perfusionists Association">APRA — Asociación de Perfusionistas</h3>
+                <span class="work-year">2025</span>
+              </div>
+              <p class="work-desc"
+                 data-es="Sitio institucional + dashboard de miembros + plataforma de exámenes online con generación automática de diplomas en PDF al aprobar."
+                 data-en="Institutional site + members dashboard + online exam platform with automatic PDF diploma generation upon passing.">
+                Sitio institucional + dashboard de miembros + plataforma de exámenes online con generación automática de diplomas en PDF al aprobar.
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">Firebase Auth</span>
+                <span class="tech-tag">jsPDF</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">UX/UI</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-btn primary" href="https://apracec.com.ar/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span data-es="Ver sitio" data-en="Visit site">Ver sitio</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Guardians of the Ball / Unreal -->
+          <article class="work-card" data-tags="unreal design">
+            <div class="work-media">
+              <!-- Video embed: reemplazá el src por tu video real de YouTube/Vimeo -->
+              <div class="work-media-video">
+                <video
+                  src="https://guardiansoftheball.com/_astro/presentacionVideoES.BrqxB8jH.webm"
+                  muted
+                  autoplay
+                  loop
+                  playsinline
+                  controls
+                  preload="none"
+                ></video>
+              </div>
+              <span class="work-media-badge" data-es="Unreal Engine · Gaming" data-en="Unreal Engine · Gaming">Unreal Engine · Gaming</span>
+            </div>
+            <div class="work-body">
+              <div class="work-header-row">
+                <h3 class="work-title">Guardians of the Ball</h3>
+                <span class="work-year">2023 — 2025</span>
+              </div>
+              <p class="work-desc"
+                 data-es="Producto de gaming con integración Unreal Engine 5, MetaHuman, pixel streaming y flujos UX para jugadores. Diseño de interfaces, frontend y desarrollo 3D."
+                 data-en="Gaming product with Unreal Engine 5 integration, MetaHuman, pixel streaming and player-facing UX flows. UI design, frontend and 3D development.">
+                Producto de gaming con integración Unreal Engine 5, MetaHuman, pixel streaming y flujos UX para jugadores. Diseño de interfaces, frontend y desarrollo 3D.
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">Unreal Engine 5</span>
+                <span class="tech-tag">Ready Player Me</span>
+                <span class="tech-tag">Pixel Streaming</span>
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">UX/UI</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-btn primary" href="https://guardiansoftheball.com/es/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-es="Ver demo" data-en="Watch demo">Ver Sitio</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. MusicVerse / Daxenworld -->
+          <article class="work-card" data-tags="web design">
+            <div class="work-media">
+              <!-- Video embed: reemplazá el src por tu video real de YouTube/Vimeo -->
+              <div class="work-media-video">
+                <video
+                  src="https://musicversebeta.web.app/img/musicverseweb.mp4"
+                  muted
+                  autoplay
+                  loop
+                  playsinline
+                  controls
+                  preload="none"
+                ></video>
+              </div>
+              <span class="work-media-badge" data-es="Unreal Engine · Gaming" data-en="Unreal Engine · Gaming">Unreal Engine · Gaming</span>
+            </div>
+            <div class="work-body">
+              <div class="work-header-row">
+                <h3 class="work-title">MusicVerse</h3>
+                <span class="work-year">2024 →</span>
+              </div>
+              <p class="work-desc"
+                 data-es="Plataforma SaaS para músicos: autenticación multi-usuario, dashboard de analítica, i18n en 6 idiomas, scheduling y herramientas sociales. Stack Firebase + JS."
+                 data-en="SaaS platform for musicians: multi-user auth, analytics dashboard, i18n in 6 languages, scheduling and social features. Firebase + JS stack.">
+                Plataforma SaaS para músicos: autenticación multi-usuario, dashboard de analítica, i18n en 6 idiomas, scheduling y herramientas sociales. Stack Firebase + JS.
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">SPA</span>
+                <span class="tech-tag">i18n</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-btn primary" href="https://daxenworld.com/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span data-es="Ver proyecto" data-en="View project">Ver proyecto</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Comercio Independiente Website -->
+          <article class="work-card" data-tags="web commerce">
+            <div class="work-media">
+              <div class="work-media-cover work-cover-credit" aria-label="Comercio Independiente website preview">
+                <div class="work-cover-tag">comercioindependiente.com</div>
+              </div>
+              <span class="work-media-badge" data-es="E-commerce · Marketplace" data-en="E-commerce · Marketplace">E-commerce · Marketplace</span>
+            </div>
+            <div class="work-body">
+              <div class="work-header-row">
+                <h3 class="work-title" data-es="Comercio Independiente" data-en="Comercio Independiente">Comercio Independiente</h3>
+                <span class="work-year">2025</span>
+              </div>
+              <p class="work-desc"
+                 data-es="Sitio web para comercios independientes con catálogo de productos, ficha de tienda, pasarela de pagos y experiencia responsive. Construido para potenciar la venta local y digitalizar comercios argentinos."
+                 data-en="Website for independent merchants with product catalog, store pages, checkout flow and responsive UX. Built to empower local sales and digitize small businesses in Argentina.">
+                Sitio web para comercios independientes con catálogo de productos, ficha de tienda, pasarela de pagos y experiencia responsive. Construido para potenciar la venta local y digitalizar comercios argentinos.
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-btn primary" href="https://www.comercioindependiente.com" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span data-es="Ver sitio" data-en="View site">Ver sitio</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. CoIn Wallet Login Page -->
+          <article class="work-card" data-tags="web finance">
+            <div class="work-media">
+              <div class="work-media-cover work-cover-kanban" aria-label="CoIn Wallet login preview">
+                <div class="work-cover-tag">coin-wallet/login</div>
+              </div>
+              <span class="work-media-badge" data-es="FinTech · Auth" data-en="FinTech · Auth">FinTech · Auth</span>
+            </div>
+            <div class="work-body">
+              <div class="work-header-row">
+                <h3 class="work-title" data-es="Login CoIn Wallet" data-en="CoIn Wallet Login">Login CoIn Wallet</h3>
+                <span class="work-year">2025</span>
+              </div>
+              <p class="work-desc"
+                 data-es="Página de acceso para la wallet de comercio independiente, con autenticación segura, recuperación de contraseña y transición hacia pagos digitales. UI cuidada para vendedores y clientes."
+                 data-en="Login page for the independent commerce wallet, with secure authentication, password recovery and a transition toward digital payments. Polished UI for merchants and customers.">
+                Página de acceso para la wallet de comercio independiente, con autenticación segura, recuperación de contraseña y transición hacia pagos digitales. UI cuidada para vendedores y clientes.
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Secure Login</span>
+                <span class="tech-tag">Responsive UI</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-btn primary" href="https://www.comercioindependiente.com/coin-wallet/login.php" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span data-es="Ver login" data-en="View login">Ver login</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Jakks EPK -->
+          <article class="work-card" data-tags="web design">
+            <div class="work-media">
+              <div class="work-media-cover work-cover-jakks" aria-label="Jakks band EPK preview">
+                <div class="work-cover-tag">jakks · EPK</div>
+              </div>
+              <span class="work-media-badge" data-es="Marca personal · Música" data-en="Personal brand · Music">Marca personal · Música</span>
+            </div>
+            <div class="work-body">
+              <div class="work-header-row">
+                <h3 class="work-title">Jakks — Electronic Press Kit</h3>
+                <span class="work-year">2026</span>
+              </div>
+              <p class="work-desc"
+                 data-es="EPK single-file con embeds de Spotify y YouTube, timeline biográfica 2006–2026, discografía y toggle ES/EN. Diseño y desarrollo de punta a punta."
+                 data-en="Single-file EPK with Spotify and YouTube embeds, biography timeline 2006–2026, discography and ES/EN toggle. End-to-end design and development.">
+                EPK single-file con embeds de Spotify y YouTube, timeline biográfica 2006–2026, discografía y toggle ES/EN. Diseño y desarrollo de punta a punta.
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">i18n</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-btn primary" href="https://alemichelis.github.io/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span data-es="Ver sitio" data-en="Visit site">Ver sitio</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Behance / Diseño -->
+          <article class="work-card" data-tags="design">
+            <div class="work-media">
+              <div class="work-media-cover work-cover-behance" aria-label="Behance portfolio preview">
+                <div class="work-cover-tag">behance · portfolio</div>
+              </div>
+              <span class="work-media-badge" data-es="Branding · Diseño" data-en="Branding · Design">Branding · Diseño</span>
+            </div>
+            <div class="work-body">
+              <div class="work-header-row">
+                <h3 class="work-title" data-es="Portfolio de diseño" data-en="Design portfolio">Portfolio de diseño</h3>
+                <span class="work-year">2015 →</span>
+              </div>
+              <p class="work-desc"
+                 data-es="Selección curada de proyectos de branding, diseño gráfico y dirección de arte. Trabajos para marcas como Yelmo, Ultracomb y campañas digitales propias."
+                 data-en="Curated selection of branding, graphic design and art direction projects. Work for brands like Yelmo, Ultracomb and own digital campaigns.">
+                Selección curada de proyectos de branding, diseño gráfico y dirección de arte. Trabajos para marcas como Yelmo, Ultracomb y campañas digitales propias.
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">Photoshop</span>
+                <span class="tech-tag">Illustrator</span>
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">Branding</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-btn primary" href="https://behance.net/alejandromichelis" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.803 5.731c.72 0 1.37.059 1.96.211.59.151 1.09.391 1.51.724.42.332.75.773.98 1.323.21.549.33 1.232.33 2.035 0 .86-.19 1.575-.58 2.145-.38.57-.96 1.038-1.71 1.416 1.04.298 1.82.82 2.34 1.583.51.765.78 1.68.78 2.746 0 .86-.17 1.605-.5 2.234-.33.629-.79 1.145-1.36 1.54-.57.395-1.23.686-1.96.871-.72.186-1.47.278-2.23.278H0V5.731zM23.77 14.207c0 .43-.06.86-.17 1.308l-5.35.001c-.01.68.24 1.212.55 1.614.34.396.82.596 1.45.596.45 0 .85-.112 1.2-.338.33-.225.54-.462.61-.707h2.69c-.41 1.183-1.06 2.07-1.91 2.672-.85.602-1.88.903-3.08.903-.84 0-1.61-.138-2.29-.415-.68-.276-1.26-.667-1.73-1.172-.47-.505-.83-1.11-1.08-1.815-.25-.705-.38-1.497-.38-2.376 0-.85.13-1.632.39-2.342.26-.71.62-1.325 1.09-1.846.46-.52 1.02-.927 1.67-1.22.65-.295 1.38-.443 2.19-.443.92 0 1.73.168 2.42.507.69.337 1.26.784 1.72 1.34.45.554.77 1.196.99 1.917.18.64.28 1.29.28 1.85zm-6.07-5.495h-5.25V7.351h5.25zm-1.36 5.495c-.05-.54-.26-.98-.54-1.32-.27-.334-.7-.51-1.29-.51-.39 0-.71.069-.96.205-.25.137-.46.306-.62.508-.15.203-.27.406-.34.64-.7.19-.12.394-.14.477h3.91z"/></svg>
+                  <span data-es="Ver Behance" data-en="View Behance">Ver Behance</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
       <!-- EDUCATION -->
       <div class="section">
-        <div class="section-label"><span class="section-label-num">06</span> <span data-es="Formación" data-en="Education">Formación</span></div>
+        <div class="section-label"><span class="section-label-num">07</span> <span data-es="Formación" data-en="Education">Formación</span></div>
         <h2 class="section-title">
           <span data-es="Estudios y" data-en="Education and">Estudios y</span>
           <em data-es="capacitación" data-en="training">capacitación</em>
@@ -453,7 +792,7 @@
 
       <!-- REFERENCES -->
       <div class="section">
-        <div class="section-label"><span class="section-label-num">07</span> <span data-es="Referencias" data-en="References">Referencias</span></div>
+        <div class="section-label"><span class="section-label-num">08</span> <span data-es="Referencias" data-en="References">Referencias</span></div>
         <h2 class="section-title">
           <span data-es="Personas que" data-en="People who">Personas que</span>
           <em data-es="responden" data-en="vouch">responden</em>

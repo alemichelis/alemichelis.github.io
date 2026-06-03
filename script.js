@@ -72,6 +72,24 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll('.section').forEach(s => io.observe(s));
 
 /* =========================================================
+   SELECTED WORK · FILTERS
+   ========================================================= */
+const workFilters = document.querySelectorAll('.work-filter');
+const workCards = document.querySelectorAll('.work-card');
+
+workFilters.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+    workFilters.forEach(b => b.classList.toggle('on', b === btn));
+    workCards.forEach(card => {
+      const tags = (card.dataset.tags || '').split(/\s+/);
+      const show = filter === 'all' || tags.includes(filter);
+      card.classList.toggle('hide', !show);
+    });
+  });
+});
+
+/* =========================================================
    KEYBOARD SHORTCUTS
    ========================================================= */
 document.addEventListener('keydown', (e) => {
