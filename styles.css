@@ -351,13 +351,49 @@ model-viewer {
   to   { transform: rotate(360deg); }
 }
 
+/* =========================================================
+   HERO INTRO VIDEO
+   ========================================================= */
+.hero-video {
+  position: relative;
+  opacity: 0;
+  animation: slideUp 1s var(--ease) 0.6s forwards;
+  min-height: clamp(360px, 60vh, 640px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.hero-video-el {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(360px, 60vh, 640px);
+  background: #000;
+  object-fit: cover;
+}
+
+.hero-video-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: clamp(360px, 60vh, 640px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: var(--text-faint);
+}
+
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
     align-items: start;
   }
-  .hero-3d { order: -1; }
+  .hero-3d, .hero-video { order: -1; }
   model-viewer { height: clamp(280px, 70vw, 420px); }
+  .hero-video, .hero-video-el, .hero-video-placeholder { min-height: clamp(240px, 70vw, 380px); }
 }
 
 @media (max-width: 600px) {
@@ -771,6 +807,11 @@ model-viewer {
   gap: 14px;
 }
 
+/* Full-width section (see .section-full): lock to 4 even columns on desktop */
+@media (min-width: 900px) {
+  .section-full .edu-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
 .edu-card {
   padding: 20px 20px 18px;
   background: var(--surface);
@@ -830,6 +871,11 @@ model-viewer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 14px;
+}
+
+/* Full-width section (see .section-full): lock to 4 even columns on desktop */
+@media (min-width: 900px) {
+  .section-full .ref-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 .ref-card {
@@ -1001,6 +1047,39 @@ model-viewer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+}
+
+/* Section 06 spans the full main-grid width (sidebar column included — it's
+   already empty by this point), so the cards keep their normal size AND the
+   assistant gets its own real column instead of squeezing the grid. */
+.section-full { grid-column: 1 / -1; }
+
+/* Two-column layout: project grid on the left, assistant docked on the right */
+.work-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+.work-main { min-width: 0; }
+
+.aleai-dock {
+  position: sticky;
+  top: 96px;
+  height: min(560px, calc(100vh - 160px));
+}
+
+/* Chat cerrado desde el docked panel: el grid de proyectos recupera todo el ancho */
+.work-layout.chat-closed {
+  grid-template-columns: 1fr;
+}
+.work-layout.chat-closed .aleai-dock {
+  display: none;
+}
+
+@media (max-width: 1180px) {
+  .work-layout { grid-template-columns: 1fr; }
+  .aleai-dock { display: none; }
 }
 
 .work-card {
@@ -1283,7 +1362,8 @@ model-viewer {
   .link-arrow,
   .flag,
   .lang-bar-track,
-  .hero-3d {
+  .hero-3d,
+  .hero-video {
     display: none !important;
   }
 

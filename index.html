@@ -2,9 +2,9 @@
 <html lang="es" data-theme="dark">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alejandro Michelis — Senior Web Designer · Full Stack Dev · UX/UI</title>
-<meta name="description" content="Alejandro Michelis — Senior Web Designer, Full Stack Developer y UX/UI Designer con base en Argentina. 15+ años diseñando y construyendo producto digital." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Alejandro Michelis — Forward Deployed Engineer | AI Integration</title>
+<meta name="description" content="Alejandro Michelis — Forward Deployed Engineer especializado en integración de IA (Claude, OpenAI). 15+ años construyendo producto digital de punta a punta para clientes institucionales, gobierno y empresas." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,10 +56,10 @@
       </h1>
 
       <p class="hero-title fade-switch">
-        <strong data-es="Senior Web Designer · Full Stack Developer · UX/UI Designer." data-en="Senior Web Designer · Full Stack Developer · UX/UI Designer.">Senior Web Designer · Full Stack Developer · UX/UI Designer.</strong>
-        <span data-es=" 15+ años diseñando y construyendo producto digital — del branding al código productivo, con foco en experiencias rápidas, accesibles y memorables."
-              data-en=" 15+ years designing and shipping digital product — from branding to production code, with a focus on fast, accessible and memorable experiences.">
-          15+ años diseñando y construyendo producto digital — del branding al código productivo, con foco en experiencias rápidas, accesibles y memorables.
+        <strong data-es="Forward Deployed Engineer · AI Integration · Full Stack." data-en="Forward Deployed Engineer · AI Integration · Full Stack.">Forward Deployed Engineer · AI Integration · Full Stack.</strong>
+        <span data-es=" 15+ años resolviendo problemas reales de clientes con código: integro IA (Claude, OpenAI) en productos productivos, del descubrimiento con stakeholders al deploy — gobierno, instituciones y empresas."
+              data-en=" 15+ years solving real client problems with code: I integrate AI (Claude, OpenAI) into production products, from stakeholder discovery to deploy — government, institutions and companies.">
+          15+ años resolviendo problemas reales de clientes con código: integro IA (Claude, OpenAI) en productos productivos, del descubrimiento con stakeholders al deploy — gobierno, instituciones y empresas.
         </span>
       </p>
 
@@ -76,6 +76,20 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Argentina
         </span>
+      </div>
+    </div>
+
+    <!-- Intro video — drop intro.mp4 (+ optional intro-poster.jpg) in img/ to activate.
+         Once the file exists, uncomment the <video> below and remove .hero-video-placeholder. -->
+    <div class="hero-video">
+      <!-- <video class="hero-video-el" src="./img/intro.mp4" poster="./img/intro-poster.jpg" controls playsinline preload="metadata"></video> -->
+      <div class="hero-video-placeholder">
+        <div class="hero-3d-ring"></div>
+        <svg class="hero-3d-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="26" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M34 29l20 11-20 11V29z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <span class="hero-3d-label" data-es="Video de introducción · Próximamente" data-en="Intro video · Coming soon">Video de introducción · Próximamente</span>
       </div>
     </div>
 
@@ -173,6 +187,17 @@
       <!-- SKILLS -->
       <div class="section">
         <div class="section-label"><span class="section-label-num">03</span> <span data-es="Stack" data-en="Stack">Stack</span></div>
+
+        <div class="skill-group-label" data-es="IA / Integración" data-en="AI / Integration">IA / Integración</div>
+        <div class="skills-cluster">
+          <span class="skill-chip">Claude API</span>
+          <span class="skill-chip">OpenAI API</span>
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">FastAPI</span>
+          <span class="skill-chip">Prompt Engineering</span>
+          <span class="skill-chip">RAG</span>
+          <span class="skill-chip">AI Agents</span>
+        </div>
 
         <div class="skill-group-label" data-es="Frontend" data-en="Frontend">Frontend</div>
         <div class="skills-cluster">
@@ -408,8 +433,13 @@
         </div>
       </div>
 
-      <!-- ========= SELECTED WORK ========= -->
-      <div class="section">
+    </div><!-- /.content (part 1) — se reabre después de la 06 -->
+
+    <!-- ========= SELECTED WORK ========= -->
+    <!-- Full-width: usa también el ancho de la columna del sidebar, que a esta altura ya quedó vacía -->
+    <div class="section section-full">
+       <div class="work-layout">
+        <div class="work-main">
         <div class="section-label"><span class="section-label-num">06</span> <span data-es="Trabajos seleccionados" data-en="Selected work">Trabajos seleccionados</span></div>
         <h2 class="section-title">
           <span data-es="Casos" data-en="Featured">Casos</span>
@@ -712,10 +742,16 @@
           </article>
 
         </div>
-      </div>
+        </div>
 
-      <!-- EDUCATION -->
-      <div class="section">
+        <!-- Chat dock: on wide screens the assistant lives here, pinned beside the work grid -->
+        <aside class="aleai-dock" id="aleaiDock" aria-label="Asistente IA"></aside>
+       </div>
+    </div>
+
+    <!-- ========= EDUCATION ========= -->
+    <!-- Full-width too: same free sidebar column, more room for the cards -->
+    <div class="section section-full">
         <div class="section-label"><span class="section-label-num">07</span> <span data-es="Formación" data-en="Education">Formación</span></div>
         <h2 class="section-title">
           <span data-es="Estudios y" data-en="Education and">Estudios y</span>
@@ -788,10 +824,11 @@
                                    data-en="High School Diploma">Bachillerato — Educación Secundaria</div>
           </div>
         </div>
-      </div>
+    </div>
 
-      <!-- REFERENCES -->
-      <div class="section">
+    <!-- ========= REFERENCES ========= -->
+    <!-- Full-width too, same reason as 06/07 -->
+    <div class="section section-full">
         <div class="section-label"><span class="section-label-num">08</span> <span data-es="Referencias" data-en="References">Referencias</span></div>
         <h2 class="section-title">
           <span data-es="Personas que" data-en="People who">Personas que</span>
@@ -892,9 +929,8 @@
             </div>
           </div>
         </div>
-      </div>
-
     </div>
+
   </div>
 
   <!-- ========= FOOTER ========= -->
@@ -911,5 +947,6 @@
 
 </main>
 <script src="script.js"></script>
+<script src="chatbot.js"></script>
 </body>
 </html>

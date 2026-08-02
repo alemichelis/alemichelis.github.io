@@ -20,8 +20,8 @@ function applyLang(lang) {
     });
     document.documentElement.lang = lang;
     document.title = lang === 'es'
-      ? 'Alejandro Michelis — Senior Web Designer · Full Stack Dev · UX/UI'
-      : 'Alejandro Michelis — Senior Web Designer · Full Stack Dev · UX/UI';
+      ? 'Alejandro Michelis — Forward Deployed Engineer | AI Integration'
+      : 'Alejandro Michelis — Forward Deployed Engineer | AI Integration';
     document.querySelectorAll('[data-lang-btn]').forEach(el => {
       el.classList.toggle('on', el.dataset.langBtn === lang);
     });
