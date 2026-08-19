@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diseño de interiores · Prototipo navegable</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#2D3B31;
+  --verde-osc:#212C24;
+  --terracota:#C0714A;
+  --arena:#E3D5BE;
+  --arena-cl:#EFE7D8;
+  --hueso:#F5F2EC;
+  --tinta:#1F1D1B;
+  --gris:#7C766E;
+  --gris-cl:#A8A29A;
+  --linea:#E6E1D8;
+  --blanco:#FFFFFF;
+
+  --sw-moderno:linear-gradient(158deg,#BFC6D2 0%,#8B95A6 100%);
+  --sw-escandinavo:linear-gradient(158deg,#EEE4D3 0%,#D9CBB3 100%);
+  --sw-boho:linear-gradient(158deg,#CB8355 0%,#A55C2F 100%);
+  --sw-minimalista:linear-gradient(158deg,#E4E4E0 0%,#C7C7C1 100%);
+  --sw-industrial:linear-gradient(158deg,#7D7267 0%,#4E463F 100%);
+  --sw-clasico:linear-gradient(158deg,#C3934F 0%,#946A31 100%);
+
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+  --texto:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:var(--texto);
+  background:#171A17;
+  color:var(--tinta);
+  -webkit-font-smoothing:antialiased;
+}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--terracota);outline-offset:3px}
+
+/* ---------- Shell de presentación ---------- */
+.shell{min-height:100%;display:flex;flex-direction:column}
+
+.barra{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding:18px 32px;
+  border-bottom:1px solid rgba(255,255,255,.09);
+  flex-wrap:wrap;
+}
+.marca{display:flex;align-items:baseline;gap:14px}
+.marca h1{
+  font-family:var(--display);font-size:19px;font-weight:600;
+  color:#F2EEE6;letter-spacing:-.01em;
+}
+.marca span{font-size:12px;color:#8A857C;letter-spacing:.09em;text-transform:uppercase}
+
+.segmento{display:flex;gap:4px;background:rgba(255,255,255,.06);padding:4px;border-radius:999px}
+.segmento button{
+  padding:8px 18px;border-radius:999px;font-size:13px;font-weight:500;
+  color:#9B968D;transition:background .18s,color .18s;
+}
+.segmento button[aria-selected="true"]{background:#F2EEE6;color:#22241F}
+
+.escena{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:38px 32px 56px}
+
+.vista{display:none;width:100%}
+.vista.activa{display:block}
+
+/* ---------- Vista prototipo ---------- */
+.taller{
+  display:grid;grid-template-columns:minmax(0,300px) auto;
+  gap:56px;align-items:start;justify-content:center;max-width:1080px;margin:0 auto;
+}
+
+.pasos{display:flex;flex-direction:column;gap:6px;padding-top:6px}
+.pasos h2{
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:#7D7871;margin-bottom:14px;font-weight:500;
+}
+.paso{
+  display:flex;gap:14px;align-items:flex-start;text-align:left;
+  padding:13px 14px;border-radius:10px;transition:background .18s;
+  border-left:2px solid transparent;
+}
+.paso:hover{background:rgba(255,255,255,.04)}
+.paso[aria-current="true"]{background:rgba(255,255,255,.07);border-left-color:var(--terracota)}
+.paso .num{
+  font-family:var(--display);font-size:13px;color:#6F6A63;
+  min-width:20px;padding-top:1px;
+}
+.paso[aria-current="true"] .num{color:var(--terracota)}
+.paso .txt strong{display:block;font-size:14px;font-weight:500;color:#E9E5DD;margin-bottom:3px}
+.paso .txt em{font-style:normal;font-size:12.5px;color:#847F77;line-height:1.5}
+
+.nota{
+  margin-top:26px;padding:16px 18px;border-radius:10px;
+  background:rgba(255,255,255,.04);font-size:12.5px;line-height:1.65;color:#8D887F;
+}
+.nota b{color:#C3BDB3;font-weight:500}
+
+/* ---------- Teléfono ---------- */
+.telefono{
+  width:390px;height:800px;border-radius:44px;
+  background:#0E100E;padding:11px;
+  box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.07);
+  position:relative;
+}
+.pantalla{
+  width:100%;height:100%;border-radius:34px;overflow:hidden;
+  background:var(--hueso);position:relative;
+}
+.scroll{
+  position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;
+  scrollbar-width:none;
+}
+.scroll::-webkit-scrollbar{display:none}
+
+.app{display:none;min-height:100%;flex-direction:column}
+.app.activa{display:flex}
+
+/* ---------- 01 · Home ---------- */
+.home{background:var(--hueso);padding:26px 20px 92px}
+.saludo{font-size:12.5px;color:var(--gris);margin-bottom:2px}
+.encabezado{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px}
+.encabezado h2{font-family:var(--display);font-size:25px;font-weight:600;letter-spacing:-.02em;line-height:1.15}
+.campana{
+  width:38px;height:38px;border-radius:50%;background:var(--blanco);
+  display:grid;place-items:center;flex-shrink:0;border:1px solid var(--linea);
+}
+.buscador{
+  display:flex;align-items:center;gap:10px;background:var(--blanco);
+  border:1px solid var(--linea);border-radius:12px;padding:12px 14px;margin-bottom:22px;
+}
+.buscador input{border:none;background:none;font-family:var(--texto);font-size:13.5px;width:100%;color:var(--tinta)}
+.buscador input::placeholder{color:var(--gris-cl)}
+.buscador input:focus{outline:none}
+
+.hero{
+  background:var(--verde);border-radius:20px;padding:24px 22px 26px;
+  color:#F2EFE9;margin-bottom:30px;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-58px;top:-58px;width:160px;height:160px;
+  border-radius:50%;background:rgba(192,113,74,.13);
+}
+.etiqueta{
+  display:inline-block;background:var(--terracota);color:#fff;
+  font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 11px;border-radius:6px;margin-bottom:16px;position:relative;
+}
+.hero h3{
+  font-family:var(--display);font-size:27px;font-weight:600;line-height:1.16;
+  letter-spacing:-.02em;margin-bottom:11px;position:relative;
+}
+.hero p{font-size:13px;line-height:1.55;color:rgba(242,239,233,.72);margin-bottom:20px;position:relative}
+.cta-claro{
+  display:inline-flex;align-items:center;gap:9px;background:var(--blanco);color:var(--verde);
+  font-size:13.5px;font-weight:500;padding:12px 20px;border-radius:999px;position:relative;
+  transition:transform .18s;
+}
+.cta-claro:hover{transform:translateX(3px)}
+
+.seccion-tit{font-family:var(--display);font-size:19px;font-weight:600;margin-bottom:14px;letter-spacing:-.01em}
+
+.carrusel{display:flex;gap:11px;overflow-x:auto;padding-bottom:4px;margin:0 -20px 28px;padding-left:20px;padding-right:20px;scrollbar-width:none}
+.carrusel::-webkit-scrollbar{display:none}
+.chip{
+  flex:0 0 88px;height:88px;border-radius:13px;position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;padding:9px;transition:transform .18s;
+}
+.chip:hover{transform:translateY(-3px)}
+.chip span{font-size:11.5px;font-weight:500;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+
+.proyectos{display:flex;gap:13px;overflow-x:auto;margin:0 -20px;padding:0 20px 6px;scrollbar-width:none}
+.proyectos::-webkit-scrollbar{display:none}
+.tarjeta{
+  flex:0 0 152px;background:var(--blanco);border-radius:14px;overflow:hidden;
+  border:1px solid var(--linea);transition:transform .18s;
+}
+.tarjeta:hover{transform:translateY(-3px)}
+.tarjeta .foto{height:96px;position:relative;display:flex;align-items:flex-start;padding:9px}
+.tarjeta .foto span{
+  background:rgba(255,255,255,.92);font-size:9px;font-weight:700;letter-spacing:.06em;
+  padding:4px 8px;border-radius:5px;color:var(--verde);
+}
+.tarjeta .pie{padding:11px 12px 13px}
+.tarjeta .pie strong{display:block;font-size:13px;font-weight:500;margin-bottom:3px}
+.tarjeta .pie em{font-style:normal;font-size:11.5px;color:var(--gris)}
+
+.navbar{
+  position:absolute;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);border-top:1px solid var(--linea);
+  display:flex;padding:11px 0 20px;
+}
+.navbar button{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:10px;color:var(--gris-cl)}
+.navbar button[aria-current="true"]{color:var(--verde)}
+
+/* ---------- 02 · Quiz ---------- */
+.quiz{background:var(--blanco);padding:22px 20px 26px;min-height:100%}
+.quiz-top{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.volver{width:26px;height:26px;display:grid;place-items:center;flex-shrink:0}
+.progreso{flex:1;height:4px;background:var(--linea);border-radius:999px;overflow:hidden}
+.progreso i{display:block;height:100%;background:var(--verde);border-radius:999px;transition:width .4s cubic-bezier(.4,0,.2,1)}
+.saltar{font-size:12.5px;color:var(--gris);flex-shrink:0}
+
+.eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--terracota);margin-bottom:9px}
+.quiz h2{font-family:var(--display);font-size:25px;font-weight:600;letter-spacing:-.02em;line-height:1.18;margin-bottom:8px}
+.quiz > p{font-size:13px;line-height:1.55;color:var(--gris);margin-bottom:22px}
+
+.grilla{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:20px}
+.opcion{
+  height:118px;border-radius:13px;position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;padding:11px;transition:transform .16s;
+}
+.opcion:hover{transform:translateY(-2px)}
+.opcion span{font-size:12px;font-weight:500;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.45)}
+.marca-sel{
+  position:absolute;top:11px;left:11px;width:21px;height:21px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.85);background:rgba(255,255,255,.18);
+  display:grid;place-items:center;transition:background .16s,border-color .16s;
+}
+.marca-sel svg{opacity:0;transition:opacity .16s}
+.opcion[aria-pressed="true"] .marca-sel{background:var(--verde);border-color:var(--verde)}
+.opcion[aria-pressed="true"] .marca-sel svg{opacity:1}
+
+.contador{font-size:12px;color:var(--gris);margin-bottom:14px}
+.cta-oscuro{
+  width:100%;background:var(--verde);color:#F2EFE9;font-size:14.5px;font-weight:500;
+  padding:16px;border-radius:12px;transition:background .18s,opacity .18s;
+}
+.cta-oscuro:hover{background:var(--verde-osc)}
+.cta-oscuro:disabled{opacity:.35;cursor:not-allowed}
+
+/* ---------- 03 · Resultado ---------- */
+.resultado{background:var(--blanco);padding:20px 18px 100px;min-height:100%}
+.res-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.res-top h2{font-family:var(--display);font-size:17px;font-weight:600}
+
+.render{
+  height:196px;border-radius:16px;margin-bottom:16px;position:relative;
+  background:linear-gradient(152deg,#D5B695 0%,#B98F66 55%,#A87B52 100%);
+  display:flex;align-items:flex-start;padding:13px;
+}
+.render span{
+  background:rgba(255,255,255,.93);font-size:9.5px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;padding:6px 10px;border-radius:6px;color:var(--verde);
+}
+
+.tabs{display:flex;gap:3px;background:var(--hueso);padding:4px;border-radius:999px;margin-bottom:20px}
+.tabs button{
+  flex:1;padding:9px 6px;border-radius:999px;font-size:12.5px;font-weight:500;
+  color:var(--gris);transition:background .18s,color .18s;
+}
+.tabs button[aria-selected="true"]{background:var(--blanco);color:var(--tinta);box-shadow:0 1px 3px rgba(0,0,0,.07)}
+
+.panel{display:none}
+.panel.activa{display:block}
+
+.puntos{display:flex;gap:9px;margin-bottom:22px}
+.punto{width:31px;height:31px;border-radius:50%;border:1px solid rgba(0,0,0,.07)}
+
+.ficha{border-top:1px solid var(--linea);padding:14px 0;display:flex;justify-content:space-between;gap:16px;font-size:13px}
+.ficha dt{color:var(--gris)}
+.ficha dd{font-weight:500;text-align:right}
+.resumen{font-size:13.5px;line-height:1.65;color:var(--gris);margin-bottom:6px}
+
+.lista-tit{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+.lista-tit h3{font-family:var(--display);font-size:19px;font-weight:600}
+.lista-tit em{font-style:normal;font-size:11.5px;color:var(--gris)}
+
+.producto{
+  display:flex;align-items:center;gap:12px;background:var(--blanco);
+  border:1px solid var(--linea);border-radius:13px;padding:11px;margin-bottom:9px;
+}
+.producto .mini{width:44px;height:44px;border-radius:9px;flex-shrink:0}
+.producto .info{flex:1;min-width:0}
+.producto .info strong{display:block;font-size:13px;font-weight:500;margin-bottom:2px}
+.producto .info em{font-style:normal;font-size:11px;color:var(--gris);display:block;margin-bottom:3px}
+.producto .info b{font-size:13px;font-weight:700}
+.sumar{
+  width:29px;height:29px;border-radius:50%;background:var(--hueso);
+  display:grid;place-items:center;flex-shrink:0;transition:background .16s,transform .16s;
+}
+.sumar:hover{background:var(--arena-cl);transform:scale(1.08)}
+.producto[data-activo="false"]{opacity:.42}
+.producto[data-activo="false"] .sumar{background:var(--hueso)}
+
+.paleta-item{display:flex;align-items:center;gap:13px;padding:12px 0;border-bottom:1px solid var(--linea)}
+.paleta-item .swatch{width:38px;height:38px;border-radius:9px;border:1px solid rgba(0,0,0,.07);flex-shrink:0}
+.paleta-item .datos strong{display:block;font-size:13px;font-weight:500;margin-bottom:2px}
+.paleta-item .datos em{font-style:normal;font-size:11.5px;color:var(--gris);letter-spacing:.04em}
+
+.total{
+  position:absolute;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);border-top:1px solid var(--linea);padding:14px 18px 22px;
+}
+.total .fila{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px}
+.total .fila span{font-size:12.5px;color:var(--gris)}
+.total .fila b{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+
+/* ---------- Vista Figma ---------- */
+.figma-vista{max-width:1080px;margin:0 auto}
+.aviso{
+  background:rgba(192,113,74,.12);border:1px solid rgba(192,113,74,.3);
+  border-radius:10px;padding:14px 18px;margin-bottom:18px;
+  font-size:13px;line-height:1.6;color:#D8CFC4;
+}
+.aviso b{color:#F0E8DE;font-weight:500}
+.marco-figma{
+  border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.1);
+  background:#1E1E1E;height:72vh;min-height:480px;
+}
+.marco-figma iframe{width:100%;height:100%;border:none;display:block}
+.enlace-directo{
+  display:inline-flex;align-items:center;gap:8px;margin-top:16px;
+  font-size:13px;color:#9B968D;text-decoration:none;transition:color .18s;
+}
+.enlace-directo:hover{color:#E9E5DD;text-decoration:underline}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  .taller{grid-template-columns:1fr;gap:32px;justify-items:center}
+  .pasos{max-width:390px;width:100%}
+  .escena{padding:26px 18px 40px}
+  .barra{padding:16px 18px}
+}
+@media (max-width:430px){
+  .telefono{width:100%;max-width:360px;height:720px;border-radius:34px;padding:8px}
+  .pantalla{border-radius:27px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms !important;animation-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <header class="barra">
+    <div class="marca">
+      <h1>Diseñá tu hogar ideal</h1>
+      <span>Prototipo · v1</span>
+    </div>
+    <div class="segmento" role="tablist" aria-label="Vista">
+      <button role="tab" aria-selected="true" data-vista="proto">Prototipo</button>
+      <button role="tab" aria-selected="false" data-vista="figma">Diseño en Figma</button>
+    </div>
+  </header>
+
+  <main class="escena">
+
+    <!-- ============ PROTOTIPO ============ -->
+    <section class="vista activa" id="v-proto">
+      <div class="taller">
+
+        <nav class="pasos" aria-label="Pantallas">
+          <h2>Flujo</h2>
+          <button class="paso" aria-current="true" data-ir="home">
+            <span class="num">01</span>
+            <span class="txt">
+              <strong>Home</strong>
+              <em>Punto de entrada. Explorar estilos y ver proyectos ya resueltos.</em>
+            </span>
+          </button>
+          <button class="paso" aria-current="false" data-ir="quiz">
+            <span class="num">02</span>
+            <span class="txt">
+              <strong>Quiz de estilo</strong>
+              <em>Cinco pasos para entender el gusto del usuario antes de proponer.</em>
+            </span>
+          </button>
+          <button class="paso" aria-current="false" data-ir="resultado">
+            <span class="num">03</span>
+            <span class="txt">
+              <strong>Resultado</strong>
+              <em>Propuesta con lista de compras, paleta y presupuesto cerrado.</em>
+            </span>
+          </button>
+
+          <p class="nota">
+            <b>Navegable.</b> El quiz guarda las selecciones, las pestañas del resultado cambian el contenido y el total se recalcula al sacar o agregar productos.
+          </p>
+        </nav>
+
+        <div class="telefono">
+          <div class="pantalla">
+
+            <!-- 01 · HOME -->
+            <div class="scroll app activa" id="app-home">
+              <div class="home">
+                <p class="saludo">Hola, Sofía</p>
+                <div class="encabezado">
+                  <h2>Diseñá tu<br>hogar ideal</h2>
+                  <div class="campana" aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2D3B31" stroke-width="1.8" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+                  </div>
+                </div>
+
+                <div class="buscador">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A8A29A" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                  <input type="search" placeholder="Buscá inspiración, estilos, muebles…" aria-label="Buscar">
+                </div>
+
+                <div class="hero">
+                  <span class="etiqueta">Nuevo proyecto</span>
+                  <h3>Transformá tu espacio en días, no meses</h3>
+                  <p>Diseñadores profesionales crean tu ambiente ideal, 100% online.</p>
+                  <button class="cta-claro" data-ir="quiz">
+                    Empezar proyecto
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </button>
+                </div>
+
+                <h3 class="seccion-tit">Explorá por estilo</h3>
+                <div class="carrusel">
+                  <button class="chip" style="background:var(--sw-moderno)"><span>Moderno</span></button>
+                  <button class="chip" style="background:var(--sw-escandinavo)"><span>Escandinavo</span></button>
+                  <button class="chip" style="background:var(--sw-boho)"><span>Boho</span></button>
+                  <button class="chip" style="background:var(--sw-minimalista)"><span>Minimalista</span></button>
+                  <button class="chip" style="background:var(--sw-industrial)"><span>Industrial</span></button>
+                  <button class="chip" style="background:var(--sw-clasico)"><span>Clásico</span></button>
+                </div>
+
+                <h3 class="seccion-tit">Inspirate con proyectos reales</h3>
+                <div class="proyectos">
+                  <button class="tarjeta" data-ir="resultado">
+                    <div class="foto" style="background:linear-gradient(152deg,#D9C2A6,#B4906C)"><span>Antes → Después</span></div>
+                    <div class="pie"><strong>Living moderno</strong><em>Desde $45.000</em></div>
+                  </button>
+                  <button class="tarjeta" data-ir="resultado">
+                    <div class="foto" style="background:linear-gradient(152deg,#C98A5E,#A2653C)"><span>Antes → Después</span></div>
+                    <div class="pie"><strong>Dormitorio boho</strong><em>Desde $38.500</em></div>
+                  </button>
+                  <button class="tarjeta" data-ir="resultado">
+                    <div class="foto" style="background:linear-gradient(152deg,#B8BCC4,#8D93A0)"><span>Antes → Después</span></div>
+                    <div class="pie"><strong>Cocina escandinava</strong><em>Desde $52.000</em></div>
+                  </button>
+                </div>
+              </div>
+
+              <nav class="navbar" aria-label="Navegación principal">
+                <button aria-current="true">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+                  Inicio
+                </button>
+                <button>
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                  Explorar
+                </button>
+                <button data-ir="resultado">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+                  Proyectos
+                </button>
+                <button>
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+                  Perfil
+                </button>
+              </nav>
+            </div>
+
+            <!-- 02 · QUIZ -->
+            <div class="scroll app" id="app-quiz">
+              <div class="quiz">
+                <div class="quiz-top">
+                  <button class="volver" data-ir="home" aria-label="Volver">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1F1D1B" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+                  </button>
+                  <div class="progreso"><i style="width:40%"></i></div>
+                  <button class="saltar" data-ir="resultado">Saltar</button>
+                </div>
+
+                <p class="eyebrow">Paso 2 de 5</p>
+                <h2>¿Qué estilo te representa?</h2>
+                <p>Elegí las opciones que más te gusten. Podés seleccionar varias.</p>
+
+                <div class="grilla" id="grilla-estilos">
+                  <button class="opcion" aria-pressed="false" style="background:var(--sw-moderno)"><span class="marca-sel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Moderno</span></button>
+                  <button class="opcion" aria-pressed="true" style="background:var(--sw-escandinavo)"><span class="marca-sel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Escandinavo</span></button>
+                  <button class="opcion" aria-pressed="true" style="background:var(--sw-boho)"><span class="marca-sel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Boho</span></button>
+                  <button class="opcion" aria-pressed="false" style="background:var(--sw-minimalista)"><span class="marca-sel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Minimalista</span></button>
+                  <button class="opcion" aria-pressed="false" style="background:var(--sw-industrial)"><span class="marca-sel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Industrial</span></button>
+                  <button class="opcion" aria-pressed="false" style="background:var(--sw-clasico)"><span class="marca-sel"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Clásico</span></button>
+                </div>
+
+                <p class="contador" id="contador">2 estilos seleccionados</p>
+                <button class="cta-oscuro" id="btn-continuar" data-ir="resultado">Continuar</button>
+              </div>
+            </div>
+
+            <!-- 03 · RESULTADO -->
+            <div class="scroll app" id="app-resultado">
+              <div class="resultado">
+                <div class="res-top">
+                  <button class="volver" data-ir="quiz" aria-label="Volver">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1F1D1B" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+                  </button>
+                  <h2>Tu diseño</h2>
+                  <button aria-label="Compartir">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1D1B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg>
+                  </button>
+                </div>
+
+                <div class="render"><span>Living moderno</span></div>
+
+                <div class="tabs" role="tablist" aria-label="Detalle del diseño">
+                  <button role="tab" aria-selected="true" data-panel="diseno">Diseño</button>
+                  <button role="tab" aria-selected="false" data-panel="compras">Lista de compras</button>
+                  <button role="tab" aria-selected="false" data-panel="paleta">Paleta</button>
+                </div>
+
+                <!-- Panel Diseño -->
+                <div class="panel activa" id="p-diseno">
+                  <div class="puntos" aria-hidden="true">
+                    <span class="punto" style="background:#2D3B31"></span>
+                    <span class="punto" style="background:#C0714A"></span>
+                    <span class="punto" style="background:#E9DCC6"></span>
+                    <span class="punto" style="background:#9A8873"></span>
+                    <span class="punto" style="background:#FFFFFF"></span>
+                  </div>
+                  <p class="resumen">Un living de líneas limpias con maderas cálidas y textiles naturales. La paleta se apoya en neutros terrosos y un verde profundo que ancla el ambiente.</p>
+                  <dl>
+                    <div class="ficha"><dt>Ambiente</dt><dd>Living · 24 m²</dd></div>
+                    <div class="ficha"><dt>Estilos aplicados</dt><dd id="estilos-aplicados">Escandinavo · Boho</dd></div>
+                    <div class="ficha"><dt>Entrega estimada</dt><dd>7 días hábiles</dd></div>
+                    <div class="ficha"><dt>Diseñadora asignada</dt><dd>Malena Ruiz</dd></div>
+                  </dl>
+                </div>
+
+                <!-- Panel Compras -->
+                <div class="panel" id="p-compras">
+                  <div class="lista-tit">
+                    <h3>Lista de compras</h3>
+                    <em id="cuenta-productos">6 productos</em>
+                  </div>
+                  <div id="lista-productos">
+                    <div class="producto" data-activo="true" data-precio="18900">
+                      <span class="mini" style="background:linear-gradient(150deg,#EDE2CE,#D6C4A6)"></span>
+                      <span class="info"><strong>Sofá modular Nordic</strong><em>Textil · Beige</em><b>$18.900</b></span>
+                      <button class="sumar" aria-label="Quitar Sofá modular Nordic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2D3B31" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+                    </div>
+                    <div class="producto" data-activo="true" data-precio="9400">
+                      <span class="mini" style="background:linear-gradient(150deg,#B58B5E,#8E6740)"></span>
+                      <span class="info"><strong>Mesa ratona roble</strong><em>Madera maciza</em><b>$9.400</b></span>
+                      <button class="sumar" aria-label="Quitar Mesa ratona roble"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2D3B31" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+                    </div>
+                    <div class="producto" data-activo="true" data-precio="6200">
+                      <span class="mini" style="background:linear-gradient(150deg,#6E655C,#3B352F)"></span>
+                      <span class="info"><strong>Lámpara de pie Arco</strong><em>Metal negro</em><b>$6.200</b></span>
+                      <button class="sumar" aria-label="Quitar Lámpara de pie Arco"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2D3B31" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+                    </div>
+                    <div class="producto" data-activo="true" data-precio="5900">
+                      <span class="mini" style="background:linear-gradient(150deg,#DCCDB2,#BCA684)"></span>
+                      <span class="info"><strong>Alfombra Berbere</strong><em>Lana natural</em><b>$5.900</b></span>
+                      <button class="sumar" aria-label="Quitar Alfombra Berbere"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2D3B31" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+                    </div>
+                    <div class="producto" data-activo="true" data-precio="3400">
+                      <span class="mini" style="background:linear-gradient(150deg,#F0EAE0,#D9D1C4)"></span>
+                      <span class="info"><strong>Cortinas de lino</strong><em>Lino belga · Crudo</em><b>$3.400</b></span>
+                      <button class="sumar" aria-label="Quitar Cortinas de lino"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2D3B31" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+                    </div>
+                    <div class="producto" data-activo="true" data-precio="2100">
+                      <span class="mini" style="background:linear-gradient(150deg,#C89468,#9E6C42)"></span>
+                      <span class="info"><strong>Tríptico enmarcado</strong><em>Impresión fine art</em><b>$2.100</b></span>
+                      <button class="sumar" aria-label="Quitar Tríptico enmarcado"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2D3B31" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Panel Paleta -->
+                <div class="panel" id="p-paleta">
+                  <div class="paleta-item"><span class="swatch" style="background:#2D3B31"></span><span class="datos"><strong>Verde bosque</strong><em>#2D3B31 · Ancla</em></span></div>
+                  <div class="paleta-item"><span class="swatch" style="background:#C0714A"></span><span class="datos"><strong>Terracota</strong><em>#C0714A · Acento</em></span></div>
+                  <div class="paleta-item"><span class="swatch" style="background:#E9DCC6"></span><span class="datos"><strong>Arena</strong><em>#E9DCC6 · Base cálida</em></span></div>
+                  <div class="paleta-item"><span class="swatch" style="background:#9A8873"></span><span class="datos"><strong>Taupe</strong><em>#9A8873 · Neutro medio</em></span></div>
+                  <div class="paleta-item"><span class="swatch" style="background:#FFFFFF"></span><span class="datos"><strong>Blanco puro</strong><em>#FFFFFF · Respiro</em></span></div>
+                </div>
+              </div>
+
+              <div class="total">
+                <div class="fila">
+                  <span>Total del proyecto</span>
+                  <b id="monto-total">$45.900</b>
+                </div>
+                <button class="cta-oscuro">Hablar con diseñador</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ FIGMA ============ -->
+    <section class="vista" id="v-figma">
+      <div class="figma-vista">
+        <p class="aviso">
+          <b>Para que el cliente vea esto:</b> en Figma, abrí Share y poné el archivo en “Anyone with the link · can view”. Sin ese permiso, acá aparece una pantalla de login en vez del diseño.
+        </p>
+        <div class="marco-figma">
+          <iframe
+            title="Archivo de Figma · Diseño de interiores"
+            src="https://embed.figma.com/design/URsc73Hzg1xJSZofjbmHf3/Dise%C3%B1o-de-interiores?node-id=0-1&embed-host=share"
+            allowfullscreen></iframe>
+        </div>
+        <a class="enlace-directo" href="https://www.figma.com/design/URsc73Hzg1xJSZofjbmHf3/Dise%C3%B1o-de-interiores?node-id=0-1" target="_blank" rel="noopener">
+          Abrir el archivo en Figma
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---- Cambio de vista (Prototipo / Figma) ---- */
+  var tabsVista = document.querySelectorAll('.segmento button');
+  tabsVista.forEach(function(b){
+    b.addEventListener('click', function(){
+      tabsVista.forEach(function(x){ x.setAttribute('aria-selected','false'); });
+      b.setAttribute('aria-selected','true');
+      document.getElementById('v-proto').classList.toggle('activa', b.dataset.vista === 'proto');
+      document.getElementById('v-figma').classList.toggle('activa', b.dataset.vista === 'figma');
+    });
+  });
+
+  /* ---- Navegación entre pantallas ---- */
+  var pantallas = { home:'app-home', quiz:'app-quiz', resultado:'app-resultado' };
+
+  function ir(destino){
+    if(!pantallas[destino]) return;
+    Object.keys(pantallas).forEach(function(k){
+      var el = document.getElementById(pantallas[k]);
+      el.classList.toggle('activa', k === destino);
+      if(k === destino) el.scrollTop = 0;
+    });
+    document.querySelectorAll('.paso').forEach(function(p){
+      p.setAttribute('aria-current', String(p.dataset.ir === destino));
+    });
+  }
+
+  document.addEventListener('click', function(e){
+    var disparador = e.target.closest('[data-ir]');
+    if(disparador) ir(disparador.dataset.ir);
+  });
+
+  /* ---- Quiz: selección múltiple ---- */
+  var opciones  = document.querySelectorAll('#grilla-estilos .opcion');
+  var contador  = document.getElementById('contador');
+  var continuar = document.getElementById('btn-continuar');
+  var aplicados = document.getElementById('estilos-aplicados');
+
+  function refrescarQuiz(){
+    var elegidos = [];
+    opciones.forEach(function(o){
+      if(o.getAttribute('aria-pressed') === 'true'){
+        elegidos.push(o.querySelector('span:last-child').textContent);
+      }
+    });
+    var n = elegidos.length;
+    contador.textContent = n === 1 ? '1 estilo seleccionado' : n + ' estilos seleccionados';
+    continuar.disabled = n === 0;
+    aplicados.textContent = n ? elegidos.join(' · ') : 'Sin definir';
+  }
+
+  opciones.forEach(function(o){
+    o.addEventListener('click', function(){
+      o.setAttribute('aria-pressed', o.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+      refrescarQuiz();
+    });
+  });
+  refrescarQuiz();
+
+  /* ---- Resultado: pestañas ---- */
+  var tabsRes = document.querySelectorAll('.tabs button');
+  tabsRes.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabsRes.forEach(function(x){ x.setAttribute('aria-selected','false'); });
+      t.setAttribute('aria-selected','true');
+      document.querySelectorAll('#app-resultado .panel').forEach(function(p){
+        p.classList.toggle('activa', p.id === 'p-' + t.dataset.panel);
+      });
+    });
+  });
+
+  /* ---- Resultado: total dinámico ---- */
+  var productos = document.querySelectorAll('#lista-productos .producto');
+  var monto     = document.getElementById('monto-total');
+  var cuenta    = document.getElementById('cuenta-productos');
+
+  function formatear(n){
+    return '$' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  }
+
+  function recalcular(){
+    var suma = 0, activos = 0;
+    productos.forEach(function(p){
+      if(p.dataset.activo === 'true'){
+        suma += parseInt(p.dataset.precio, 10);
+        activos++;
+      }
+    });
+    monto.textContent = formatear(suma);
+    cuenta.textContent = activos === 1 ? '1 producto' : activos + ' productos';
+  }
+
+  productos.forEach(function(p){
+    p.querySelector('.sumar').addEventListener('click', function(){
+      p.dataset.activo = p.dataset.activo === 'true' ? 'false' : 'true';
+      recalcular();
+    });
+  });
+  recalcular();
+
+})();
+</script>
+</body>
+</html>
