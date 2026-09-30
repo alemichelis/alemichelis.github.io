@@ -79,18 +79,14 @@
       </div>
     </div>
 
-    <!-- Intro video — drop intro.mp4 (+ optional intro-poster.jpg) in img/ to activate.
-         Once the file exists, uncomment the <video> below and remove .hero-video-placeholder. -->
     <div class="hero-video">
-      <!-- <video class="hero-video-el" src="./img/intro.mp4" poster="./img/intro-poster.jpg" controls playsinline preload="metadata"></video> -->
-      <div class="hero-video-placeholder">
-        <div class="hero-3d-ring"></div>
-        <svg class="hero-3d-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="40" cy="40" r="26" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M34 29l20 11-20 11V29z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-        </svg>
-        <span class="hero-3d-label" data-es="Video de introducción · Próximamente" data-en="Intro video · Coming soon">Video de introducción · Próximamente</span>
-      </div>
+      <video class="hero-video-el" id="heroVideo" src="./img/videoweb.mp4" controls playsinline preload="metadata">
+        <track kind="subtitles" src="./img/videoweb.es.vtt" srclang="es" label="Español" data-lang="es" default>
+        <track kind="subtitles" src="./img/videoweb.en.vtt" srclang="en" label="English" data-lang="en">
+      </video>
+      <button class="hero-video-play" id="heroVideoPlay" aria-label="Reproducir video" type="button">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </button>
     </div>
 
     <!-- 3D Avatar — drop avatar.glb in img/ to activate -->
@@ -457,7 +453,82 @@
 
         <div class="work-grid">
 
-          <!-- 1. INTEATRO -->
+          <!-- 1. Impulso Ágil -->
+          <article class="work-card" data-tags="web design">
+            <div class="work-media">
+              <div class="work-media-cover work-cover-impulso" aria-label="Impulso Ágil landing preview">
+                <div class="work-cover-tag">impulsoagil.online</div>
+              </div>
+              <span class="work-media-badge" data-es="SaaS · IA" data-en="SaaS · AI">SaaS · IA</span>
+            </div>
+            <div class="work-body">
+              <div class="work-header-row">
+                <h3 class="work-title">Impulso Ágil</h3>
+                <span class="work-year">2026 →</span>
+              </div>
+              <p class="work-desc"
+                 data-es="Landing SaaS para automatización de negocios con IA: visualización 3D interactiva (Three.js) que conecta rubros como e-commerce, RR.HH. y comunicación, planes, integraciones y FAQ. Toggle ES/EN."
+                 data-en="AI business-automation SaaS landing page: interactive 3D visualization (Three.js) connecting verticals like e-commerce, HR and communication, plans, integrations and FAQ. ES/EN toggle.">
+                Landing SaaS para automatización de negocios con IA: visualización 3D interactiva (Three.js) que conecta rubros como e-commerce, RR.HH. y comunicación, planes, integraciones y FAQ. Toggle ES/EN.
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">Three.js</span>
+                <span class="tech-tag">WebGL</span>
+                <span class="tech-tag">AI Agents</span>
+                <span class="tech-tag">SaaS</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-btn primary" href="https://impulsoagil.online/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span data-es="Ver sitio" data-en="Visit site">Ver sitio</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Daxenworld -->
+          <article class="work-card" data-tags="unreal design">
+            <div class="work-media">
+              <!-- Video embed: reemplazá el src por tu video real de YouTube/Vimeo -->
+              <div class="work-media-video">
+                <video
+                  src="https://musicversebeta.web.app/img/musicverseweb.mp4"
+                  muted
+                  autoplay
+                  loop
+                  playsinline
+                  controls
+                  preload="none"
+                ></video>
+              </div>
+              <span class="work-media-badge" data-es="Unreal Engine · Metaverso" data-en="Unreal Engine · Metaverse">Unreal Engine · Metaverso</span>
+            </div>
+            <div class="work-body">
+              <div class="work-header-row">
+                <h3 class="work-title">Daxenworld</h3>
+                <span class="work-year">2024 →</span>
+              </div>
+              <p class="work-desc"
+                 data-es="Metaverso de entretenimiento con mundos temáticos, avatar IA conversacional (Convai), MusicVerse (SaaS musical con beat sync), juegos y menús digitales. Unreal Engine, MetaHuman y pixel streaming."
+                 data-en="Entertainment metaverse with themed worlds, a conversational AI avatar (Convai), MusicVerse (music SaaS with beat sync), games and digital menus. Unreal Engine, MetaHuman and pixel streaming.">
+                Metaverso de entretenimiento con mundos temáticos, avatar IA conversacional (Convai), MusicVerse (SaaS musical con beat sync), juegos y menús digitales. Unreal Engine, MetaHuman y pixel streaming.
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">Unreal Engine 5</span>
+                <span class="tech-tag">MetaHuman</span>
+                <span class="tech-tag">Convai</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-btn primary" href="https://daxenworld.com/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span data-es="Ver proyecto" data-en="View project">Ver proyecto</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. INTEATRO -->
           <article class="work-card" data-tags="web design">
             <div class="work-media">
               <div class="work-media-cover work-cover-inteatro" aria-label="INTEATRO institutional site preview">
@@ -491,7 +562,7 @@
             </div>
           </article>
 
-          <!-- 2. APRA -->
+          <!-- 4. APRA -->
           <article class="work-card" data-tags="web design">
             <div class="work-media">
               <div class="work-media-cover work-cover-apra" aria-label="APRA evaluation platform preview">
@@ -524,7 +595,7 @@
             </div>
           </article>
 
-          <!-- 3. Guardians of the Ball / Unreal -->
+          <!-- 5. Guardians of the Ball / Unreal -->
           <article class="work-card" data-tags="unreal design">
             <div class="work-media">
               <!-- Video embed: reemplazá el src por tu video real de YouTube/Vimeo -->
@@ -567,49 +638,7 @@
             </div>
           </article>
 
-          <!-- 4. MusicVerse / Daxenworld -->
-          <article class="work-card" data-tags="web design">
-            <div class="work-media">
-              <!-- Video embed: reemplazá el src por tu video real de YouTube/Vimeo -->
-              <div class="work-media-video">
-                <video
-                  src="https://musicversebeta.web.app/img/musicverseweb.mp4"
-                  muted
-                  autoplay
-                  loop
-                  playsinline
-                  controls
-                  preload="none"
-                ></video>
-              </div>
-              <span class="work-media-badge" data-es="Unreal Engine · Gaming" data-en="Unreal Engine · Gaming">Unreal Engine · Gaming</span>
-            </div>
-            <div class="work-body">
-              <div class="work-header-row">
-                <h3 class="work-title">MusicVerse</h3>
-                <span class="work-year">2024 →</span>
-              </div>
-              <p class="work-desc"
-                 data-es="Plataforma SaaS para músicos: autenticación multi-usuario, dashboard de analítica, i18n en 6 idiomas, scheduling y herramientas sociales. Stack Firebase + JS."
-                 data-en="SaaS platform for musicians: multi-user auth, analytics dashboard, i18n in 6 languages, scheduling and social features. Firebase + JS stack.">
-                Plataforma SaaS para músicos: autenticación multi-usuario, dashboard de analítica, i18n en 6 idiomas, scheduling y herramientas sociales. Stack Firebase + JS.
-              </p>
-              <div class="work-tech">
-                <span class="tech-tag">Firebase</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">SPA</span>
-                <span class="tech-tag">i18n</span>
-              </div>
-              <div class="work-actions">
-                <a class="work-btn primary" href="https://daxenworld.com/" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                  <span data-es="Ver proyecto" data-en="View project">Ver proyecto</span>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 5. Comercio Independiente Website -->
+          <!-- 6. Comercio Independiente Website -->
           <article class="work-card" data-tags="web commerce">
             <div class="work-media">
               <div class="work-media-cover work-cover-credit" aria-label="Comercio Independiente website preview">
@@ -642,7 +671,7 @@
             </div>
           </article>
 
-          <!-- 6. CoIn Wallet Login Page -->
+          <!-- 7. CoIn Wallet Login Page -->
           <article class="work-card" data-tags="web finance">
             <div class="work-media">
               <div class="work-media-cover work-cover-kanban" aria-label="CoIn Wallet login preview">
@@ -675,7 +704,7 @@
             </div>
           </article>
 
-          <!-- 7. Jakks EPK -->
+          <!-- 8. Jakks EPK -->
           <article class="work-card" data-tags="web design">
             <div class="work-media">
               <div class="work-media-cover work-cover-jakks" aria-label="Jakks band EPK preview">
@@ -708,7 +737,7 @@
             </div>
           </article>
 
-          <!-- 8. Behance / Diseño -->
+          <!-- 9. Behance / Diseño -->
           <article class="work-card" data-tags="design">
             <div class="work-media">
               <div class="work-media-cover work-cover-behance" aria-label="Behance portfolio preview">

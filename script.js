@@ -28,6 +28,14 @@ function applyLang(lang) {
     localStorage.setItem('cv-lang', lang);
     state.lang = lang;
     document.querySelectorAll('.fade-switch').forEach(el => el.classList.remove('switching'));
+
+    const heroVideoEl = document.getElementById('heroVideo');
+    if (heroVideoEl) {
+      Array.from(heroVideoEl.textTracks).forEach(track => {
+        const trackEl = Array.from(heroVideoEl.querySelectorAll('track')).find(t => t.srclang === track.language);
+        track.mode = (trackEl && trackEl.dataset.lang === lang) ? 'showing' : 'disabled';
+      });
+    }
   }, 160);
 }
 
@@ -108,3 +116,15 @@ applyTheme(state.theme);
 
 /* Make hero sections visible immediately */
 document.querySelectorAll('.hero .section').forEach(s => s.classList.add('visible'));
+
+/* =========================================================
+   HERO VIDEO · PLAY/PAUSE OVERLAY
+   ========================================================= */
+const heroVideo = document.getElementById('heroVideo');
+const heroVideoPlay = document.getElementById('heroVideoPlay');
+if (heroVideo && heroVideoPlay) {
+  heroVideoPlay.addEventListener('click', () => heroVideo.play());
+  heroVideo.addEventListener('play', () => heroVideoPlay.classList.add('is-hidden'));
+  heroVideo.addEventListener('pause', () => heroVideoPlay.classList.remove('is-hidden'));
+  heroVideo.addEventListener('ended', () => heroVideoPlay.classList.remove('is-hidden'));
+}
