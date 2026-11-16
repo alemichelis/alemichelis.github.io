@@ -41,18 +41,21 @@ Idiomas: español nativo, inglés avanzado.
 - Experiencia trabajando embebido con clientes institucionales: entender su problema, prototipar rápido y dejar soluciones funcionando.
 
 === EXPERIENCIA (con fechas exactas — usalas para responder preguntas por año) ===
-- INT — Instituto Nacional del Teatro | Webmaster | Nov 2025 → ACTUAL (contrato con el Estado Nacional argentino): mantenimiento y desarrollo full-stack del sitio institucional. Frontend, backend PHP/MySQL, API REST, visor de PDF, autenticación, panel de administración de actas, secciones de Autoridades y Comunicación Pública.
+- INT — Instituto Nacional del Teatro | Forward Deployed Engineer · Full Stack | Nov 2025 → ACTUAL (contrato con el Estado Nacional argentino): único ingeniero integrado al organismo, a cargo de la plataforma institucional de punta a punta. Relevamiento directo con áreas no técnicas (comunicación, legales, autoridades), API REST, esquema MySQL, backend PHP, frontend, visor de PDF, autenticación y panel de administración de actas.
+- Impulso Ágil (impulsoagil.online) | Fundador · Forward Deployed Engineer | 2026 → ACTUAL: práctica de IA y UX que construye cada solución codo a codo con el cliente. Cinco productos por rubro lanzados (RR.HH., consultorios de psicología, panel de ventas para vendedores de Mercado Libre, escena musical, oficina virtual 3D con agentes de IA). Integra asistentes como Claude con ERP/CRM/bases de datos del cliente vía servidores MCP con permisos acotados y arma el harness de agentes (herramientas, memoria, reglas).
+- MusicVerse (musicverse.com.ar) | Fundador · Forward Deployed Engineer | 2024 → ACTUAL: SaaS para la escena musical. Plataforma multiusuario para bandas y locales: perfiles, agenda de shows, métricas de redes, motor de contenido, analítica, i18n en 6 idiomas. Firebase + JS.
 - Traemos Todo | Propietario · Founder | Feb 2025 → ACTUAL: e-commerce con catálogo integrado a MercadoLibre (MercadoLíder Platinum). Producto, logística y marketing de punta a punta.
 - Educación IT | Profesor de User Experience | Dic 2024 → ACTUAL: formación de diseñadores UX/UI en cursos intensivos orientados a la industria.
 - Escuela de Arte Multimedial Da Vinci | Profesor de User Experience | Sept 2023 — Ene 2026: docencia en la Tecnicatura de Diseño Web y programas de UX — clases prácticas con Figma, prototipado y laws of UX.
-- GOB — Guardians of the Ball | Designer · Frontend · UX/UI · Unreal Engine Dev | Oct 2023 — Ene 2025: diseño de interfaces y desarrollo frontend para producto gaming, con integración en Unreal Engine y flujos de UX para jugadores.
+- GOB — Guardians of the Ball | Unreal Engine Developer · UX/UI Designer · Frontend | Oct 2023 — Ene 2025: desarrollo y diseño de UI para un videojuego en Unreal Engine 5: integración de avatares MetaHuman y Ready Player Me, pixel streaming para jugar desde el navegador y flujos UX para jugadores, del wireframe en Figma a la implementación en motor.
 - Seabury Solutions | Designer · Frontend · UX/UI | Jun 2022 — Oct 2023: desarrollo frontend y diseño de interfaz para producto de software aeronáutico. Angular/TypeScript con backends Node.js, componentes en React y React Native.
-- NM Design / NM Games / Daxenworld | Propietario · Founder · Designer · UX/UI · Frontend | Oct 2018 → ACTUAL: estudio propio de diseño, desarrollo frontend y proyectos de juegos. Clientes de distintos rubros con foco en producto digital.
+- NM Design / NM Games | Propietario · Founder · Ingeniero principal | Oct 2018 → ACTUAL: estudio propio de software, diseño y juegos. Producto digital de punta a punta para clientes institucionales y comerciales: relevamiento, propuesta, arquitectura, desarrollo, producción y soporte.
 - First Rate · Someco · Music-co | Diseño y Marketing online | Jun 2015 — Sep 2018: campañas digitales, diseño y branding para marcas como Yelmo, Ultracomb y otras cuentas de consumo masivo.
 - Tío Musa | Diseñador Gráfico · Community Manager | Dic 2011 — Jun 2015: branding, SEO y diseño gráfico integral con Photoshop, Illustrator y Fireworks. Gestión de redes y contenido.
 
 === PROYECTOS DESTACADOS ===
-- INT (gobierno nacional): plataforma institucional del Estado. PHP/MySQL, API REST, autenticación, administración de actas.
+- INT (gobierno nacional): plataforma institucional del Estado, como Forward Deployed Engineer integrado al organismo. PHP/MySQL, API REST, autenticación, administración de actas.
+- Impulso Ágil: soluciones de IA por rubro + integraciones MCP y agentes con sistemas existentes del cliente.
 - APRA — Asociación de Perfusionistas: sitio institucional + dashboard de miembros + plataforma de exámenes online con generación automática de diplomas PDF al aprobar.
 - Guardians of the Ball: gaming con Unreal Engine 5, MetaHuman, pixel streaming.
 - MusicVerse: SaaS para músicos. Multi-usuario, dashboard de analítica, i18n en 6 idiomas. Firebase + JS.
@@ -62,9 +65,9 @@ Idiomas: español nativo, inglés avanzado.
 === STACK ===
 IA: Claude API, OpenAI API, Python, FastAPI, prompt engineering, RAG, agentes.
 Frontend: HTML5, CSS3/Tailwind, JavaScript, TypeScript, React, Next.js, React Native, Angular, Vue.
-Backend: Node.js, PHP, MySQL, Firebase, REST APIs.
+Backend: Node.js, PHP, MySQL, Firebase, REST APIs, Cloudflare Workers, Git.
 Diseño: Figma, Adobe XD, Miro, Photoshop, Illustrator, After Effects.
-3D/Games: Unreal Engine, Unity, Blender, 3ds Max.
+Game Dev/3D: Unreal Engine 5, C++, MetaHuman, Pixel Streaming, Ready Player Me, Convai, Unity, Blender, 3ds Max.
 
 === EDUCACIÓN (con fechas — usalas igual que la experiencia para preguntas por año) ===
 - Escuela Da Vinci | Técnico Superior en Diseño y Programación Web | Ago 2024 → EN CURSO. Después planeo seguir con la Licenciatura en Ciencia de Datos.

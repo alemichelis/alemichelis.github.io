@@ -29,6 +29,12 @@ function applyLang(lang) {
     state.lang = lang;
     document.querySelectorAll('.fade-switch').forEach(el => el.classList.remove('switching'));
 
+    // CV downloads follow the page language; the "alt" link offers the other one
+    const other = lang === 'es' ? 'en' : 'es';
+    const cvFile = l => 'Alejandro-Michelis-CV-' + l.toUpperCase() + '.pdf';
+    document.querySelectorAll('[data-cv-link]').forEach(a => a.setAttribute('href', cvFile(lang)));
+    document.querySelectorAll('[data-cv-alt]').forEach(a => a.setAttribute('href', cvFile(other)));
+
     const heroVideoEl = document.getElementById('heroVideo');
     if (heroVideoEl) {
       Array.from(heroVideoEl.textTracks).forEach(track => {
@@ -56,13 +62,6 @@ function applyTheme(theme) {
 
 document.getElementById('themeToggle').addEventListener('click', () => {
   applyTheme(state.theme === 'dark' ? 'light' : 'dark');
-});
-
-/* =========================================================
-   PRINT / PDF
-   ========================================================= */
-document.getElementById('printBtn').addEventListener('click', () => {
-  window.print();
 });
 
 /* =========================================================
@@ -105,7 +104,6 @@ document.addEventListener('keydown', (e) => {
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
   if (e.key === 'l' || e.key === 'L') document.getElementById('langToggle').click();
   if (e.key === 't' || e.key === 'T') document.getElementById('themeToggle').click();
-  if (e.key === 'p' || e.key === 'P') { e.preventDefault(); document.getElementById('printBtn').click(); }
 });
 
 /* =========================================================
@@ -127,4 +125,4 @@ if (heroVideo && heroVideoPlay) {
   heroVideo.addEventListener('play', () => heroVideoPlay.classList.add('is-hidden'));
   heroVideo.addEventListener('pause', () => heroVideoPlay.classList.remove('is-hidden'));
   heroVideo.addEventListener('ended', () => heroVideoPlay.classList.remove('is-hidden'));
-}
+}

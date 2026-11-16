@@ -4,13 +4,39 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Alejandro Michelis — Forward Deployed Engineer | AI Integration</title>
-<meta name="description" content="Alejandro Michelis — Forward Deployed Engineer especializado en integración de IA (Claude, OpenAI). 15+ años construyendo producto digital de punta a punta para clientes institucionales, gobierno y empresas." />
+<meta name="description" content="Alejandro Michelis — Forward Deployed Engineer especializado en integración de IA (Claude, OpenAI, MCP, agentes). 15+ años construyendo producto digital de punta a punta para gobierno, instituciones y empresas. Buenos Aires · Remoto · Pasaporte UE." />
+<meta name="author" content="Alejandro Michelis" />
+<link rel="canonical" href="https://alemichelis.github.io/" />
+<meta name="theme-color" content="#0a0a0b" />
+
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="https://alemichelis.github.io/" />
+<meta property="og:title" content="Alejandro Michelis — Forward Deployed Engineer · AI Integration" />
+<meta property="og:description" content="I embed with the customer and ship: discovery, architecture, code and production. Claude, OpenAI, MCP, agents. 15+ years. Buenos Aires · Remote · EU passport." />
+<meta property="og:image" content="https://alemichelis.github.io/img/intro-poster.jpg" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0b'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23eea725'%3EAM%3C/text%3E%3C/svg%3E" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alejandro Michelis",
+  "jobTitle": "Forward Deployed Engineer",
+  "url": "https://alemichelis.github.io/",
+  "email": "mailto:alemichelis84@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" },
+  "knowsLanguage": ["es", "en"],
+  "knowsAbout": ["AI integration", "Claude API", "OpenAI API", "Model Context Protocol", "AI agents", "RAG", "Python", "FastAPI", "TypeScript", "React", "Node.js", "PHP", "MySQL", "Unreal Engine 5", "UX/UI design"],
+  "sameAs": ["https://linkedin.com/in/alejandromichelis/", "https://github.com/alemichelis", "https://behance.net/alejandromichelis"]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -30,12 +56,10 @@
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
     </svg>
   </button>
-  <button class="ctrl-btn" id="printBtn" aria-label="Download PDF / Print" title="Imprimir / Descargar PDF">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
-      <rect x="6" y="14" width="12" height="8" rx="1"/>
-    </svg>
-  </button>
+  <a class="ctrl-btn ctrl-cv" data-cv-link href="Alejandro-Michelis-CV-ES.pdf" download aria-label="Descargar CV en PDF" title="Descargar CV (PDF)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+    <span>CV</span>
+  </a>
 </div>
 
 <main class="container">
@@ -45,9 +69,10 @@
 
     <div class="hero-content">
       <div class="hero-kicker">
-        <span data-es="Currículum" data-en="Curriculum Vitae">Currículum</span>
+        <span class="hero-status" aria-hidden="true"></span>
+        <span data-es="Disponible para roles remotos" data-en="Open to remote roles">Disponible para roles remotos</span>
         <span>·</span>
-        <span>BUENOS AIRES, AR</span>
+        <span>Buenos Aires, AR</span>
       </div>
 
       <h1 class="hero-name">
@@ -55,13 +80,24 @@
         <em>Michelis</em>
       </h1>
 
+      <p class="hero-role">Forward Deployed Engineer <span>·</span> AI Integration <span>·</span> Full Stack</p>
+
       <p class="hero-title fade-switch">
-        <strong data-es="Forward Deployed Engineer · AI Integration · Full Stack." data-en="Forward Deployed Engineer · AI Integration · Full Stack.">Forward Deployed Engineer · AI Integration · Full Stack.</strong>
-        <span data-es=" 15+ años resolviendo problemas reales de clientes con código: integro IA (Claude, OpenAI) en productos productivos, del descubrimiento con stakeholders al deploy — gobierno, instituciones y empresas."
-              data-en=" 15+ years solving real client problems with code: I integrate AI (Claude, OpenAI) into production products, from stakeholder discovery to deploy — government, institutions and companies.">
-          15+ años resolviendo problemas reales de clientes con código: integro IA (Claude, OpenAI) en productos productivos, del descubrimiento con stakeholders al deploy — gobierno, instituciones y empresas.
+        <span data-es="Me integro al equipo del cliente y entrego: relevamiento con stakeholders, arquitectura, código y producción. Hoy conecto IA (Claude, OpenAI, MCP, agentes) con los sistemas que las organizaciones ya usan. 15+ años para gobierno, instituciones y empresas."
+              data-en="I embed with the customer and ship: stakeholder discovery, architecture, code and production. Today I connect AI (Claude, OpenAI, MCP, agents) to the systems organizations already run. 15+ years for government, institutions and companies.">
+          Me integro al equipo del cliente y entrego: relevamiento con stakeholders, arquitectura, código y producción. Hoy conecto IA (Claude, OpenAI, MCP, agentes) con los sistemas que las organizaciones ya usan. 15+ años para gobierno, instituciones y empresas.
         </span>
       </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" data-cv-link href="Alejandro-Michelis-CV-ES.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          <span data-es="Descargar CV (PDF)" data-en="Download CV (PDF)">Descargar CV (PDF)</span>
+        </a>
+        <a class="btn" href="https://linkedin.com/in/alejandromichelis/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="mailto:alemichelis84@gmail.com" data-es="Escribime" data-en="Email me">Escribime</a>
+        <a class="btn-alt" data-cv-alt href="Alejandro-Michelis-CV-EN.pdf" download data-es="CV in English ↓" data-en="CV en español ↓">CV in English ↓</a>
+      </div>
 
       <div class="hero-meta">
         <a href="mailto:alemichelis84@gmail.com" class="hero-meta-item">
@@ -74,49 +110,44 @@
         </a>
         <span class="hero-meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Argentina
+          <span data-es="Buenos Aires, Argentina · Remoto" data-en="Buenos Aires, Argentina · Remote">Buenos Aires, Argentina · Remoto</span>
         </span>
       </div>
     </div>
 
-    <div class="hero-video">
-      <video class="hero-video-el" id="heroVideo" src="./img/videoweb.mp4" controls playsinline preload="metadata">
-        <track kind="subtitles" src="./img/videoweb.es.vtt" srclang="es" label="Español" data-lang="es" default>
-        <track kind="subtitles" src="./img/videoweb.en.vtt" srclang="en" label="English" data-lang="en">
-      </video>
-      <button class="hero-video-play" id="heroVideoPlay" aria-label="Reproducir video" type="button">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-      </button>
+    <figure class="hero-video-wrap">
+      <div class="hero-video">
+        <video class="hero-video-el" id="heroVideo" src="./img/intro.mp4" poster="./img/intro-poster.jpg" controls playsinline preload="none">
+          <track kind="subtitles" src="./img/videoweb.es.vtt" srclang="es" label="Español" data-lang="es" default>
+          <track kind="subtitles" src="./img/videoweb.en.vtt" srclang="en" label="English" data-lang="en">
+        </video>
+        <button class="hero-video-play" id="heroVideoPlay" aria-label="Reproducir video" type="button">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <figcaption class="hero-video-cap" data-es="Presentación · 42 s · subtítulos ES / EN" data-en="Intro · 42 s · ES / EN subtitles">Presentación · 42 s · subtítulos ES / EN</figcaption>
+    </figure>
+
+  </section>
+
+  <!-- ========= KEY FACTS ========= -->
+  <section class="facts" aria-label="Datos clave">
+    <div class="fact">
+      <div class="fact-num">15+</div>
+      <div class="fact-label" data-es="años entregando producto digital de punta a punta" data-en="years shipping digital product end to end">años entregando producto digital de punta a punta</div>
     </div>
-
-    <!-- 3D Avatar — drop avatar.glb in img/ to activate -->
-    <!-- <div class="hero-3d" aria-hidden="true">
-      <model-viewer
-        src="./img/code.glb"
-        alt="Avatar 3D Alejandro Michelis"
-        auto-rotate
-        auto-rotate-delay="0"
-        rotation-per-second="20deg"
-        camera-controls
-        disable-zoom
-        shadow-intensity="0.8"
-        shadow-softness="1"
-        environment-image="neutral"
-        exposure="1.1"
-        camera-orbit="0deg 90deg auto"
-        interaction-prompt="none"
-      >
-        <div slot="poster" class="hero-3d-poster">
-          <div class="hero-3d-ring"></div>
-          <svg class="hero-3d-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="28" r="14" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M12 68c0-15.464 12.536-28 28-28s28 12.536 28 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-          <span class="hero-3d-label" data-es="Avatar 3D · Próximamente" data-en="3D Avatar · Coming Soon">Avatar 3D · Próximamente</span>
-        </div>
-      </model-viewer>
-    </div> -->
-
+    <div class="fact">
+      <div class="fact-num">5</div>
+      <div class="fact-label" data-es="productos con IA lanzados por rubro en Impulso Ágil" data-en="vertical AI products launched at Impulso Ágil">productos con IA lanzados por rubro en Impulso Ágil</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">UE · AR</div>
+      <div class="fact-label" data-es="doble ciudadanía: habilitado para trabajar en la Unión Europea y en Argentina" data-en="dual citizenship: authorized to work in the European Union and Argentina">doble ciudadanía: habilitado para trabajar en la Unión Europea y en Argentina</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">ES · EN</div>
+      <div class="fact-label" data-es="trabajo directo con clientes y equipos en los dos idiomas" data-en="customer-facing work in both languages">trabajo directo con clientes y equipos en los dos idiomas</div>
+    </div>
   </section>
 
   <!-- ========= MAIN GRID ========= -->
@@ -130,23 +161,31 @@
         <div class="section-label"><span class="section-label-num">01</span> <span data-es="Perfil" data-en="Profile">Perfil</span></div>
         <ul class="info-list">
           <li class="info-row">
-            <span class="info-key" data-es="Nacimiento" data-en="Born">Nacimiento</span>
-            <span class="info-val">06 · 12 · 1984</span>
+            <span class="info-key" data-es="Rol" data-en="Role">Rol</span>
+            <span class="info-val">Forward Deployed Engineer</span>
           </li>
           <li class="info-row">
-            <span class="info-key" data-es="Residencia" data-en="Residence">Residencia</span>
-            <span class="info-val flag-row">Argentina <span class="flag flag-ar" aria-hidden="true"></span></span>
+            <span class="info-key" data-es="Base" data-en="Based in">Base</span>
+            <span class="info-val flag-row">Buenos Aires <span class="flag flag-ar" aria-hidden="true"></span></span>
           </li>
           <li class="info-row">
-            <span class="info-key" data-es="Pasaportes" data-en="Passports">Pasaportes</span>
+            <span class="info-key" data-es="Permiso de trabajo" data-en="Work authorization">Permiso de trabajo</span>
             <span class="info-val flag-row">
               <span class="flag flag-ar" aria-hidden="true"></span>
               <span class="flag flag-gr" aria-hidden="true"></span>
-              AR · GR
+              <span data-es="AR · UE (pasaporte griego)" data-en="AR · EU (Greek passport)">AR · UE (pasaporte griego)</span>
             </span>
           </li>
           <li class="info-row">
-            <span class="info-key" data-es="Idioma" data-en="Language">Idioma</span>
+            <span class="info-key" data-es="Modalidad" data-en="Work mode">Modalidad</span>
+            <span class="info-val" data-es="Remoto · abierto a relocation" data-en="Remote · open to relocation">Remoto · abierto a relocation</span>
+          </li>
+          <li class="info-row">
+            <span class="info-key" data-es="Horario" data-en="Time zone">Horario</span>
+            <span class="info-val" data-es="UTC−3 · se solapa con EE.UU. y Europa" data-en="UTC−3 · overlaps US and EU hours">UTC−3 · se solapa con EE.UU. y Europa</span>
+          </li>
+          <li class="info-row">
+            <span class="info-key" data-es="Idiomas" data-en="Languages">Idiomas</span>
             <span class="info-val" data-es="Español nativo · Inglés avanzado" data-en="Native Spanish · Advanced English">Español nativo · Inglés avanzado</span>
           </li>
         </ul>
@@ -182,79 +221,75 @@
 
       <!-- SKILLS -->
       <div class="section">
-        <div class="section-label"><span class="section-label-num">03</span> <span data-es="Stack" data-en="Stack">Stack</span></div>
+        <div class="section-label"><span class="section-label-num">03</span> <span data-es="Habilidades" data-en="Skills">Habilidades</span></div>
 
-        <div class="skill-group-label" data-es="IA / Integración" data-en="AI / Integration">IA / Integración</div>
+        <div class="skill-group-label" data-es="IA · Integración de LLM" data-en="AI · LLM Integration">IA · Integración de LLM</div>
         <div class="skills-cluster">
-          <span class="skill-chip">Claude API</span>
+          <span class="skill-chip key">Claude API</span>
+          <span class="skill-chip key">MCP Servers</span>
+          <span class="skill-chip key">AI Agents</span>
           <span class="skill-chip">OpenAI API</span>
-          <span class="skill-chip">Python</span>
-          <span class="skill-chip">FastAPI</span>
-          <span class="skill-chip">Prompt Engineering</span>
           <span class="skill-chip">RAG</span>
-          <span class="skill-chip">AI Agents</span>
+          <span class="skill-chip">Tool Use</span>
+          <span class="skill-chip">Prompt Engineering</span>
+          <span class="skill-chip">Claude Code</span>
+        </div>
+
+        <div class="skill-group-label" data-es="Backend · Cloud" data-en="Backend · Cloud">Backend · Cloud</div>
+        <div class="skills-cluster">
+          <span class="skill-chip key">Python</span>
+          <span class="skill-chip">FastAPI</span>
+          <span class="skill-chip">Node.js</span>
+          <span class="skill-chip">PHP</span>
+          <span class="skill-chip">MySQL · SQL</span>
+          <span class="skill-chip">REST APIs</span>
+          <span class="skill-chip">Firebase</span>
+          <span class="skill-chip">Cloudflare Workers</span>
+          <span class="skill-chip">Git</span>
         </div>
 
         <div class="skill-group-label" data-es="Frontend" data-en="Frontend">Frontend</div>
         <div class="skills-cluster">
-          <span class="skill-chip">HTML5</span>
-          <span class="skill-chip">CSS3 · Tailwind</span>
+          <span class="skill-chip key">TypeScript</span>
           <span class="skill-chip">JavaScript</span>
-          <span class="skill-chip">TypeScript</span>
           <span class="skill-chip">React</span>
           <span class="skill-chip">Next.js</span>
           <span class="skill-chip">React Native</span>
           <span class="skill-chip">Angular</span>
           <span class="skill-chip">Vue</span>
+          <span class="skill-chip">Three.js</span>
+          <span class="skill-chip">HTML5 · CSS3 · Tailwind</span>
         </div>
 
-        <div class="skill-group-label" data-es="Backend / Infra" data-en="Backend / Infra">Backend / Infra</div>
+        <div class="skill-group-label" data-es="Trabajo con clientes" data-en="Customer-facing">Trabajo con clientes</div>
         <div class="skills-cluster">
-          <span class="skill-chip">Node.js</span>
-          <span class="skill-chip">PHP</span>
-          <span class="skill-chip">MySQL</span>
-          <span class="skill-chip">Firebase</span>
-          <span class="skill-chip">REST APIs</span>
+          <span class="skill-chip" data-es="Relevamiento" data-en="Discovery">Relevamiento</span>
+          <span class="skill-chip" data-es="Definición de alcance" data-en="Solution scoping">Definición de alcance</span>
+          <span class="skill-chip" data-es="Gestión de stakeholders" data-en="Stakeholder management">Gestión de stakeholders</span>
+          <span class="skill-chip" data-es="Demos técnicas" data-en="Technical demos">Demos técnicas</span>
+          <span class="skill-chip" data-es="Capacitación" data-en="Training">Capacitación</span>
         </div>
 
-        <div class="skill-group-label" data-es="Diseño & UX" data-en="Design & UX">Diseño & UX</div>
+        <div class="skill-group-label" data-es="3D en tiempo real · Game Dev" data-en="Real-time 3D · Game Dev">3D en tiempo real · Game Dev</div>
+        <div class="skills-cluster">
+          <span class="skill-chip">Unreal Engine 5</span>
+          <span class="skill-chip">C++</span>
+          <span class="skill-chip">MetaHuman</span>
+          <span class="skill-chip">Pixel Streaming</span>
+          <span class="skill-chip">Convai</span>
+          <span class="skill-chip">Ready Player Me</span>
+          <span class="skill-chip">Unity</span>
+          <span class="skill-chip">Blender</span>
+        </div>
+
+        <div class="skill-group-label" data-es="Diseño · UX" data-en="Design · UX">Diseño · UX</div>
         <div class="skills-cluster">
           <span class="skill-chip">Figma</span>
+          <span class="skill-chip">UX/UI</span>
           <span class="skill-chip">Adobe XD</span>
-          <span class="skill-chip">Miro</span>
           <span class="skill-chip">Photoshop</span>
           <span class="skill-chip">Illustrator</span>
           <span class="skill-chip">After Effects</span>
-          <span class="skill-chip">Premiere</span>
-        </div>
-
-        <div class="skill-group-label" data-es="3D & Game Dev" data-en="3D & Game Dev">3D & Game Dev</div>
-        <div class="skills-cluster">
-          <span class="skill-chip">Unreal Engine</span>
-          <span class="skill-chip">Unity</span>
-          <span class="skill-chip">Blender</span>
-          <span class="skill-chip">3ds Max</span>
-        </div>
-
-        <div class="skill-group-label" data-es="Producción musical" data-en="Music production">Producción musical</div>
-        <div class="skills-cluster">
-          <span class="skill-chip">Cubase</span>
-          <span class="skill-chip">Nuendo</span>
-        </div>
-      </div>
-
-      <!-- LANGUAGES -->
-      <div class="section">
-        <div class="section-label"><span class="section-label-num">04</span> <span data-es="Idiomas" data-en="Languages">Idiomas</span></div>
-        <div class="lang-bar">
-          <span class="lang-bar-label" data-es="Español" data-en="Spanish">Español</span>
-          <span class="lang-bar-track"><span class="lang-bar-fill" style="--level: 1"></span></span>
-          <span class="lang-bar-val" data-es="Nativo" data-en="Native">Nativo</span>
-        </div>
-        <div class="lang-bar">
-          <span class="lang-bar-label" data-es="Inglés" data-en="English">Inglés</span>
-          <span class="lang-bar-track"><span class="lang-bar-fill" style="--level: 0.9"></span></span>
-          <span class="lang-bar-val" data-es="Avanzado" data-en="Advanced">Avanzado</span>
         </div>
       </div>
 
@@ -265,7 +300,7 @@
 
       <!-- EXPERIENCE -->
       <div class="section">
-        <div class="section-label"><span class="section-label-num">05</span> <span data-es="Experiencia" data-en="Experience">Experiencia</span></div>
+        <div class="section-label"><span class="section-label-num">04</span> <span data-es="Experiencia" data-en="Experience">Experiencia</span></div>
         <h2 class="section-title">
           <span data-es="Trayectoria" data-en="Career">Trayectoria</span>
           <em data-es="profesional" data-en="path">profesional</em>
@@ -276,86 +311,162 @@
           <article class="exp-item current">
             <div class="exp-header">
               <h3 class="exp-company"><span data-es="INT — Instituto Nacional del Teatro" data-en="INT — National Theatre Institute">INT — Instituto Nacional del Teatro</span></h3>
-              <span class="exp-date badge" data-es="Actual" data-en="Current">Actual</span>
+              <span class="exp-date badge" data-es="Nov 2025 — Actual" data-en="Nov 2025 — Present">Nov 2025 — Actual</span>
             </div>
             <div class="exp-role">
-              <span>Webmaster</span>
-              <span style="color:var(--text-faint); font-weight:400"> · Nov 2025 → · <span data-es="Modalidad contrato" data-en="Contract position">Modalidad contrato</span></span>
+              <span>Forward Deployed Engineer · Full Stack</span>
+              <span class="exp-role-ctx"> · <span data-es="Estado Nacional · Contrato" data-en="National Government · Contract">Estado Nacional · Contrato</span></span>
             </div>
-            <p class="exp-desc" data-es="Mantenimiento y desarrollo del sitio institucional del INT. Trabajo full-stack sobre frontend y backend, APIs y bases de datos para secciones como Actas, Autoridades y Comunicación Pública."
-               data-en="Maintenance and development of the INT institutional website. Full-stack work on frontend and backend, APIs and databases for sections such as Actas, Authorities and Public Communication.">
-              Mantenimiento y desarrollo del sitio institucional del INT. Trabajo full-stack sobre frontend y backend, APIs y bases de datos para secciones como Actas, Autoridades y Comunicación Pública.
-            </p>
+            <ul class="exp-points">
+              <li data-es="Único ingeniero, integrado a un organismo nacional dependiente de la Secretaría de Cultura, a cargo de su plataforma institucional de punta a punta: API REST, esquema MySQL, backend PHP y frontend."
+                  data-en="Sole engineer embedded with a national government body under the Secretariat of Culture, responsible for its institutional platform end to end: REST API, MySQL schema, PHP backend and frontend.">Único ingeniero, integrado a un organismo nacional dependiente de la Secretaría de Cultura, a cargo de su plataforma institucional de punta a punta: API REST, esquema MySQL, backend PHP y frontend.</li>
+              <li data-es="Relevo requerimientos directo con áreas no técnicas (comunicación, legales y autoridades) y los convierto en funcionalidades en producción dentro de las restricciones del sector público."
+                  data-en="Run discovery directly with non-technical stakeholders (communications, legal and institutional authorities) and turn their requirements into shipped features under public-sector constraints.">Relevo requerimientos directo con áreas no técnicas (comunicación, legales y autoridades) y los convierto en funcionalidades en producción dentro de las restricciones del sector público.</li>
+              <li data-es="Entregué módulos de actas oficiales, autoridades y comunicación pública, con visor de PDF en el navegador, autenticación y panel de administración."
+                  data-en="Delivered modules for official records (Actas), authorities and public communication, with in-browser PDF rendering, authentication and an admin panel.">Entregué módulos de actas oficiales, autoridades y comunicación pública, con visor de PDF en el navegador, autenticación y panel de administración.</li>
+            </ul>
             <div class="exp-tech">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">PHP</span>
               <span class="tech-tag">MySQL</span>
               <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">PDF.js</span>
+              <span class="tech-tag">WordPress</span>
+            </div>
+            <div class="exp-links">
+              <a href="https://inteatro.gob.ar/" target="_blank" rel="noopener">inteatro.gob.ar ↗</a>
+            </div>
+          </article>
+
+          <article class="exp-item current">
+            <div class="exp-header">
+              <h3 class="exp-company">Impulso Ágil</h3>
+              <span class="exp-date badge" data-es="2026 — Actual" data-en="2026 — Present">2026 — Actual</span>
+            </div>
+            <div class="exp-role">
+              <span data-es="Fundador · Forward Deployed Engineer" data-en="Founder · Forward Deployed Engineer">Fundador · Forward Deployed Engineer</span>
+              <span class="exp-role-ctx"> · <span data-es="Soluciones de IA para empresas" data-en="AI solutions for businesses">Soluciones de IA para empresas</span></span>
+            </div>
+            <ul class="exp-points">
+              <li data-es="Fundé una práctica de IA y UX que construye cada solución codo a codo con el cliente: relevamiento, alcance, desarrollo, puesta en producción y soporte a cargo del mismo ingeniero."
+                  data-en="Founded an AI and UX practice that builds each solution side by side with the customer: discovery, scoping, build, deployment and support by the same engineer.">Fundé una práctica de IA y UX que construye cada solución codo a codo con el cliente: relevamiento, alcance, desarrollo, puesta en producción y soporte a cargo del mismo ingeniero.</li>
+              <li data-es="Lancé cinco productos por rubro sobre una base común: RR.HH., consultorios de psicología, panel de ventas para vendedores de Mercado Libre, escena musical y oficina virtual 3D con agentes de IA."
+                  data-en="Shipped five vertical products on a shared base: HR, psychology practice management, a sales panel for Mercado Libre sellers, the music scene and a 3D virtual office with AI agents.">Lancé cinco productos por rubro sobre una base común: RR.HH., consultorios de psicología, panel de ventas para vendedores de Mercado Libre, escena musical y oficina virtual 3D con agentes de IA.</li>
+              <li data-es="Conecto asistentes de IA como Claude con el ERP, el CRM y las bases de datos que el cliente ya tiene mediante servidores MCP con permisos acotados, y armo el harness de agentes: herramientas, memoria y reglas de uso."
+                  data-en="Connect AI assistants such as Claude to the customer's existing ERP, CRM and databases through MCP servers with scoped permissions, and build the agent harness: tools, memory and usage rules.">Conecto asistentes de IA como Claude con el ERP, el CRM y las bases de datos que el cliente ya tiene mediante servidores MCP con permisos acotados, y armo el harness de agentes: herramientas, memoria y reglas de uso.</li>
+            </ul>
+            <div class="exp-tech">
+              <span class="tech-tag">Claude API</span>
+              <span class="tech-tag">MCP</span>
+              <span class="tech-tag">AI Agents</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Three.js</span>
+              <span class="tech-tag">SaaS</span>
+            </div>
+            <div class="exp-links">
+              <a href="https://impulsoagil.online/" target="_blank" rel="noopener">impulsoagil.online ↗</a>
+            </div>
+          </article>
+
+          <article class="exp-item current">
+            <div class="exp-header">
+              <h3 class="exp-company">MusicVerse</h3>
+              <span class="exp-date badge" data-es="2024 — Actual" data-en="2024 — Present">2024 — Actual</span>
+            </div>
+            <div class="exp-role">
+              <span data-es="Fundador · Forward Deployed Engineer" data-en="Founder · Forward Deployed Engineer">Fundador · Forward Deployed Engineer</span>
+              <span class="exp-role-ctx"> · <span data-es="SaaS para la escena musical" data-en="SaaS for the music scene">SaaS para la escena musical</span></span>
+            </div>
+            <ul class="exp-points">
+              <li data-es="Diseñé y desarrollé una plataforma multiusuario para bandas y locales: perfiles, agenda de shows, métricas de redes sociales y motor de contenido."
+                  data-en="Designed and built a multi-user platform for bands and venues: profiles, show calendar, social media metrics and a content engine.">Diseñé y desarrollé una plataforma multiusuario para bandas y locales: perfiles, agenda de shows, métricas de redes sociales y motor de contenido.</li>
+              <li data-es="Implementé autenticación, dashboard de analítica y agenda sobre Firebase, con internacionalización a seis idiomas."
+                  data-en="Implemented authentication, an analytics dashboard and scheduling on Firebase, internationalised into six languages.">Implementé autenticación, dashboard de analítica y agenda sobre Firebase, con internacionalización a seis idiomas.</li>
+              <li data-es="Las decisiones de producto salen de conocer el rubro desde adentro, como músico con discos editados y giras, trabajando directo con los usuarios a los que apunta."
+                  data-en="Product decisions come from first-hand domain knowledge as a recording and touring musician, working directly with the users it serves.">Las decisiones de producto salen de conocer el rubro desde adentro, como músico con discos editados y giras, trabajando directo con los usuarios a los que apunta.</li>
+            </ul>
+            <div class="exp-tech">
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">SPA</span>
+              <span class="tech-tag">i18n</span>
+              <span class="tech-tag">Analytics</span>
+            </div>
+            <div class="exp-links">
+              <a href="https://musicverse.com.ar/" target="_blank" rel="noopener">musicverse.com.ar ↗</a>
+            </div>
+          </article>
+
+          <article class="exp-item current">
+            <div class="exp-header">
+              <h3 class="exp-company">NM Design / NM Games</h3>
+              <span class="exp-date" data-es="Oct 2018 — Actual" data-en="Oct 2018 — Present">Oct 2018 — Actual</span>
+            </div>
+            <div class="exp-role">
+              <span data-es="Fundador · Ingeniero principal" data-en="Founder · Principal Engineer">Fundador · Ingeniero principal</span>
+              <span class="exp-role-ctx"> · <span data-es="Estudio independiente" data-en="Independent studio">Estudio independiente</span></span>
+            </div>
+            <ul class="exp-points">
+              <li data-es="Estudio propio de software y diseño para clientes institucionales y comerciales, de punta a punta: relevamiento, propuesta de trabajo, arquitectura, desarrollo, producción y soporte."
+                  data-en="Independent software and design studio serving institutional and commercial clients end to end: discovery, statement of work, architecture, build, deployment and support.">Estudio propio de software y diseño para clientes institucionales y comerciales, de punta a punta: relevamiento, propuesta de trabajo, arquitectura, desarrollo, producción y soporte.</li>
+            </ul>
+            <div class="exp-tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Unreal Engine 5</span>
+              <span class="tech-tag">Figma</span>
+            </div>
+            <div class="exp-links">
+              <a href="https://nmvirtualartdesign.web.app/" target="_blank" rel="noopener">nmvirtualartdesign.web.app ↗</a>
             </div>
           </article>
 
           <article class="exp-item current">
             <div class="exp-header">
               <h3 class="exp-company">Traemos Todo</h3>
-              <span class="exp-date badge" data-es="Actual" data-en="Current">Actual</span>
+              <span class="exp-date" data-es="Feb 2025 — Actual" data-en="Feb 2025 — Present">Feb 2025 — Actual</span>
             </div>
             <div class="exp-role">
-              <span data-es="Propietario · Founder" data-en="Owner · Founder">Propietario · Founder</span>
-              <span style="color:var(--text-faint); font-weight:400"> · Feb 2025 →</span>
+              <span data-es="Fundador · Operador" data-en="Founder · Operator">Fundador · Operador</span>
+              <span class="exp-role-ctx"> · E-commerce</span>
             </div>
-            <p class="exp-desc" data-es="Tienda de comercio electrónico con catálogo integrado a MercadoLibre. Diseño, producto, logística y marketing de punta a punta."
-               data-en="E-commerce store integrated with MercadoLibre. End-to-end design, product, logistics and marketing.">
-              Tienda de comercio electrónico con catálogo integrado a MercadoLibre. Diseño, producto, logística y marketing de punta a punta.
-            </p>
+            <ul class="exp-points">
+              <li data-es="Opero una tienda en Mercado Libre de punta a punta (producto, precios, logística, marketing y atención), con reputación MercadoLíder Platinum."
+                  data-en="Operate a Mercado Libre storefront end to end (product, pricing, logistics, marketing, support), holding MercadoLíder Platinum seller status.">Opero una tienda en Mercado Libre de punta a punta (producto, precios, logística, marketing y atención), con reputación MercadoLíder Platinum.</li>
+              <li data-es="Estoy desarrollando un agente autónomo de e-commerce en Python y FastAPI sobre la API de Anthropic, que usa tool use para automatizar decisiones de catálogo, precios y operación."
+                  data-en="Building an autonomous e-commerce agent in Python and FastAPI on the Anthropic API, using tool use to automate catalogue, pricing and operational decisions.">Estoy desarrollando un agente autónomo de e-commerce en Python y FastAPI sobre la API de Anthropic, que usa tool use para automatizar decisiones de catálogo, precios y operación.</li>
+            </ul>
+            <div class="exp-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Anthropic API</span>
+              <span class="tech-tag">Mercado Libre API</span>
+            </div>
             <div class="exp-links">
               <a href="https://traemostodo.shop/" target="_blank" rel="noopener">traemostodo.shop ↗</a>
               <a href="https://www.mercadolibre.com.ar/pagina/igtraemostodo" target="_blank" rel="noopener">MercadoLibre ↗</a>
             </div>
           </article>
 
-          <article class="exp-item current">
-            <div class="exp-header">
-              <h3 class="exp-company">Educación IT</h3>
-              <span class="exp-date">Dic 2024 →</span>
-            </div>
-            <div class="exp-role" data-es="Profesor de User Experience" data-en="User Experience Instructor">Profesor de User Experience</div>
-            <p class="exp-desc" data-es="Formación de diseñadores UX/UI en cursos intensivos orientados a la industria."
-               data-en="Training UX/UI designers in industry-oriented intensive courses.">
-              Formación de diseñadores UX/UI en cursos intensivos orientados a la industria.
-            </p>
-          </article>
-
-          <article class="exp-item">
-            <div class="exp-header">
-              <h3 class="exp-company"><span data-es="Escuela de Arte Multimedial Da Vinci" data-en="Da Vinci School of Multimedia Arts">Escuela de Arte Multimedial Da Vinci</span></h3>
-              <span class="exp-date">Sept 2023 — Ene 2026</span>
-            </div>
-            <div class="exp-role" data-es="Profesor de User Experience" data-en="User Experience Instructor">Profesor de User Experience</div>
-            <p class="exp-desc" data-es="Docencia en la Tecnicatura de Diseño Web y programas de UX — clases prácticas con Figma, prototipado y laws of UX."
-               data-en="Teaching in the Web Design program and UX courses — hands-on classes with Figma, prototyping and laws of UX.">
-              Docencia en la Tecnicatura de Diseño Web y programas de UX — clases prácticas con Figma, prototipado y laws of UX.
-            </p>
-          </article>
-
           <article class="exp-item">
             <div class="exp-header">
               <h3 class="exp-company">GOB — Guardians of the Ball</h3>
-              <span class="exp-date">Oct 2023 — Ene 2025</span>
+              <span class="exp-date" data-es="Oct 2023 — Ene 2025" data-en="Oct 2023 — Jan 2025">Oct 2023 — Ene 2025</span>
             </div>
-            <div class="exp-role" data-es="Designer · Frontend · UX/UI · Unreal Engine Dev"
-                                 data-en="Designer · Frontend · UX/UI · Unreal Engine Dev">
-              Designer · Frontend · UX/UI · Unreal Engine Dev
+            <div class="exp-role" data-es="Unreal Engine Developer · Diseñador UX/UI · Frontend"
+                                 data-en="Unreal Engine Developer · UX/UI Designer · Frontend">
+              Unreal Engine Developer · Diseñador UX/UI · Frontend
             </div>
-            <p class="exp-desc" data-es="Diseño de interfaces y desarrollo frontend para producto gaming, con integración en Unreal Engine y flujos de UX para jugadores."
-               data-en="UI design and frontend development for a gaming product, with Unreal Engine integration and player-facing UX flows.">
-              Diseño de interfaces y desarrollo frontend para producto gaming, con integración en Unreal Engine y flujos de UX para jugadores.
+            <p class="exp-desc" data-es="Diseño y desarrollo de la UI de un videojuego en Unreal Engine 5: integración de avatares MetaHuman y Ready Player Me, pixel streaming para jugar desde el navegador y flujos para jugadores, del wireframe en Figma a la implementación en el motor."
+               data-en="Designed and built the UI for an Unreal Engine 5 game: MetaHuman and Ready Player Me avatar integration, pixel streaming for in-browser play and player-facing flows, from Figma wireframes to in-engine implementation.">
+              Diseño y desarrollo de la UI de un videojuego en Unreal Engine 5: integración de avatares MetaHuman y Ready Player Me, pixel streaming para jugar desde el navegador y flujos para jugadores, del wireframe en Figma a la implementación en el motor.
             </p>
             <div class="exp-tech">
-              <span class="tech-tag">Unreal Engine</span>
-              <span class="tech-tag">Frontend</span>
-              <span class="tech-tag">UX/UI</span>
+              <span class="tech-tag">Unreal Engine 5</span>
+              <span class="tech-tag">MetaHuman</span>
+              <span class="tech-tag">Ready Player Me</span>
+              <span class="tech-tag">Pixel Streaming</span>
               <span class="tech-tag">Figma</span>
             </div>
           </article>
@@ -365,78 +476,58 @@
               <h3 class="exp-company">Seabury Solutions</h3>
               <span class="exp-date">Jun 2022 — Oct 2023</span>
             </div>
-            <div class="exp-role" data-es="Designer · Frontend · UX/UI"
-                                 data-en="Designer · Frontend · UX/UI">Designer · Frontend · UX/UI</div>
-            <p class="exp-desc" data-es="Desarrollo frontend y diseño de interfaz para producto de software aeronáutico. Trabajo en Angular/TypeScript con backends Node.js, componentes en React y React Native."
-               data-en="Frontend development and interface design for aeronautical software. Work in Angular/TypeScript with Node.js backends, React and React Native components.">
-              Desarrollo frontend y diseño de interfaz para producto de software aeronáutico. Trabajo en Angular/TypeScript con backends Node.js, componentes en React y React Native.
+            <div class="exp-role">
+              <span data-es="Desarrollador Frontend · Diseñador UX" data-en="Frontend Developer · UX Designer">Desarrollador Frontend · Diseñador UX</span>
+              <span class="exp-role-ctx"> · <span data-es="Software aeronáutico" data-en="Aviation software">Software aeronáutico</span></span>
+            </div>
+            <p class="exp-desc" data-es="Frontends en Angular y TypeScript sobre backends Node.js para software de mantenimiento aeronáutico usado por aerolíneas. Componentes en React y React Native dentro de un equipo internacional distribuido, trabajando en inglés."
+               data-en="Frontends in Angular and TypeScript against Node.js backends for aeronautical maintenance software used by airline operators. React and React Native components within a distributed international team, working in English.">
+              Frontends en Angular y TypeScript sobre backends Node.js para software de mantenimiento aeronáutico usado por aerolíneas. Componentes en React y React Native dentro de un equipo internacional distribuido, trabajando en inglés.
             </p>
             <div class="exp-tech">
               <span class="tech-tag">Angular</span>
               <span class="tech-tag">TypeScript</span>
               <span class="tech-tag">Node.js</span>
               <span class="tech-tag">React</span>
-              <span class="tech-tag">Next.js</span>
               <span class="tech-tag">React Native</span>
-              <span class="tech-tag">Figma · Miro</span>
-            </div>
-          </article>
-
-          <article class="exp-item current">
-            <div class="exp-header">
-              <h3 class="exp-company">NM Design / NM Games / Daxenworld</h3>
-              <span class="exp-date">Oct 2018 →</span>
-            </div>
-            <div class="exp-role">
-              <span data-es="Propietario · Founder" data-en="Owner · Founder">Propietario · Founder</span>
-              <span style="color:var(--text-faint); font-weight:400"> · Designer · UX/UI · Frontend</span>
-            </div>
-            <p class="exp-desc" data-es="Estudio propio de diseño, desarrollo frontend y proyectos de juegos. Clientes de distintos rubros con foco en producto digital."
-               data-en="Own studio for design, frontend development and game projects. Clients across industries with a focus on digital product.">
-              Estudio propio de diseño, desarrollo frontend y proyectos de juegos. Clientes de distintos rubros con foco en producto digital.
-            </p>
-            <div class="exp-links">
-              <a href="https://nmvirtualartdesign.web.app/" target="_blank" rel="noopener">nmvirtualartdesign.web.app ↗</a>
-              <a href="https://daxenworld.com/" target="_blank" rel="noopener">daxenworld.com ↗</a>
             </div>
           </article>
 
           <article class="exp-item">
             <div class="exp-header">
-              <h3 class="exp-company">First Rate · Someco · Music-co</h3>
-              <span class="exp-date">Jun 2015 — Sep 2018</span>
+              <h3 class="exp-company"><span data-es="Educación IT · Escuela Da Vinci" data-en="Educación IT · Da Vinci School">Educación IT · Escuela Da Vinci</span></h3>
+              <span class="exp-date" data-es="Sep 2023 — Actual" data-en="Sep 2023 — Present">Sep 2023 — Actual</span>
             </div>
-            <div class="exp-role" data-es="Diseño y Marketing online" data-en="Design & Online Marketing">Diseño y Marketing online</div>
-            <p class="exp-desc" data-es="Campañas digitales, diseño y branding para marcas como Yelmo, Ultracomb y otras cuentas de consumo masivo."
-               data-en="Digital campaigns, design and branding for brands such as Yelmo, Ultracomb and other consumer accounts.">
-              Campañas digitales, diseño y branding para marcas como Yelmo, Ultracomb y otras cuentas de consumo masivo.
+            <div class="exp-role" data-es="Profesor de UX/UI" data-en="UX/UI Instructor">Profesor de UX/UI</div>
+            <p class="exp-desc" data-es="Cursos intensivos de UX/UI y web orientados a la industria (Educación IT desde dic 2024; Da Vinci, sep 2023 a ene 2026). Explicar decisiones técnicas a públicos técnicos y no técnicos todas las semanas."
+               data-en="Intensive, industry-oriented UX/UI and web courses (Educación IT since Dec 2024; Da Vinci, Sep 2023 to Jan 2026). Explaining technical decisions to technical and non-technical audiences every week.">
+              Cursos intensivos de UX/UI y web orientados a la industria (Educación IT desde dic 2024; Da Vinci, sep 2023 a ene 2026). Explicar decisiones técnicas a públicos técnicos y no técnicos todas las semanas.
             </p>
           </article>
 
           <article class="exp-item">
             <div class="exp-header">
-              <h3 class="exp-company">Tío Musa</h3>
-              <span class="exp-date">Dic 2011 — Jun 2015</span>
+              <h3 class="exp-company">First Rate · Someco · Music-co · Tío Musa</h3>
+              <span class="exp-date" data-es="Dic 2011 — Sep 2018" data-en="Dec 2011 — Sep 2018">Dic 2011 — Sep 2018</span>
             </div>
-            <div class="exp-role" data-es="Diseñador Gráfico · Community Manager"
-                                 data-en="Graphic Designer · Community Manager">Diseñador Gráfico · Community Manager</div>
-            <p class="exp-desc" data-es="Branding, SEO y diseño gráfico integral con Photoshop, Illustrator y Fireworks. Gestión de redes y contenido."
-               data-en="Branding, SEO and full graphic design using Photoshop, Illustrator and Fireworks. Social media and content management.">
-              Branding, SEO y diseño gráfico integral con Photoshop, Illustrator y Fireworks. Gestión de redes y contenido.
+            <div class="exp-role" data-es="Diseño y Marketing digital" data-en="Design & Digital Marketing">Diseño y Marketing digital</div>
+            <p class="exp-desc" data-es="Campañas digitales, branding, SEO y diseño gráfico para marcas de consumo masivo como Yelmo y Ultracomb."
+               data-en="Digital campaigns, branding, SEO and graphic design for consumer brands such as Yelmo and Ultracomb.">
+              Campañas digitales, branding, SEO y diseño gráfico para marcas de consumo masivo como Yelmo y Ultracomb.
             </p>
           </article>
 
         </div>
       </div>
 
-    </div><!-- /.content (part 1) — se reabre después de la 06 -->
+    </div><!-- /.content (part 1) — se reabre después de la 05 -->
 
     <!-- ========= SELECTED WORK ========= -->
     <!-- Full-width: usa también el ancho de la columna del sidebar, que a esta altura ya quedó vacía -->
     <div class="section section-full">
        <div class="work-layout">
         <div class="work-main">
-        <div class="section-label"><span class="section-label-num">06</span> <span data-es="Trabajos seleccionados" data-en="Selected work">Trabajos seleccionados</span></div>
+        <div class="section-label"><span class="section-label-num">05</span> <span data-es="Trabajos seleccionados" data-en="Selected work">Trabajos seleccionados</span></div>
         <h2 class="section-title">
           <span data-es="Casos" data-en="Featured">Casos</span>
           <em data-es="destacados" data-en="case studies">destacados</em>
@@ -448,7 +539,6 @@
           <button class="work-filter" data-filter="web" data-es="Web · App" data-en="Web · App">Web · App</button>
           <button class="work-filter" data-filter="unreal" data-es="Unreal · 3D" data-en="Unreal · 3D">Unreal · 3D</button>
           <button class="work-filter" data-filter="design" data-es="UX · Diseño" data-en="UX · Design">UX · Diseño</button>
-          <button class="work-filter" data-filter="oss" data-es="Open source" data-en="Open source">Open source</button>
         </div>
 
         <div class="work-grid">
@@ -459,23 +549,19 @@
               <div class="work-media-cover work-cover-impulso" aria-label="Impulso Ágil landing preview">
                 <div class="work-cover-tag">impulsoagil.online</div>
               </div>
-              <span class="work-media-badge" data-es="SaaS · IA" data-en="SaaS · AI">SaaS · IA</span>
+              <span class="work-media-badge" data-es="Forward Deployed · IA" data-en="Forward Deployed · AI">Forward Deployed · IA</span>
             </div>
             <div class="work-body">
               <div class="work-header-row">
                 <h3 class="work-title">Impulso Ágil</h3>
                 <span class="work-year">2026 →</span>
               </div>
-              <p class="work-desc"
-                 data-es="Landing SaaS para automatización de negocios con IA: visualización 3D interactiva (Three.js) que conecta rubros como e-commerce, RR.HH. y comunicación, planes, integraciones y FAQ. Toggle ES/EN."
-                 data-en="AI business-automation SaaS landing page: interactive 3D visualization (Three.js) connecting verticals like e-commerce, HR and communication, plans, integrations and FAQ. ES/EN toggle.">
-                Landing SaaS para automatización de negocios con IA: visualización 3D interactiva (Three.js) que conecta rubros como e-commerce, RR.HH. y comunicación, planes, integraciones y FAQ. Toggle ES/EN.
-              </p>
+              <p class="work-desc" data-es="Soluciones de IA por rubro construidas codo a codo con cada cliente: cinco productos lanzados (RR.HH., psicología, e-commerce, música, oficina 3D) e integración de asistentes como Claude con sistemas existentes vía servidores MCP y agentes." data-en="Vertical AI solutions built side by side with each customer: five products launched (HR, psychology, e-commerce, music, 3D office) and integration of assistants like Claude with existing systems through MCP servers and agents.">Soluciones de IA por rubro construidas codo a codo con cada cliente: cinco productos lanzados (RR.HH., psicología, e-commerce, música, oficina 3D) e integración de asistentes como Claude con sistemas existentes vía servidores MCP y agentes.</p>
               <div class="work-tech">
-                <span class="tech-tag">Three.js</span>
-                <span class="tech-tag">WebGL</span>
+                <span class="tech-tag">Claude API</span>
+                <span class="tech-tag">MCP</span>
                 <span class="tech-tag">AI Agents</span>
-                <span class="tech-tag">SaaS</span>
+                <span class="tech-tag">Three.js</span>
               </div>
               <div class="work-actions">
                 <a class="work-btn primary" href="https://impulsoagil.online/" target="_blank" rel="noopener">
@@ -486,7 +572,7 @@
             </div>
           </article>
 
-          <!-- 2. Daxenworld -->
+          <!-- 2. MusicVerse -->
           <article class="work-card" data-tags="unreal design">
             <div class="work-media">
               <!-- Video embed: reemplazá el src por tu video real de YouTube/Vimeo -->
@@ -501,26 +587,22 @@
                   preload="none"
                 ></video>
               </div>
-              <span class="work-media-badge" data-es="Unreal Engine · Metaverso" data-en="Unreal Engine · Metaverse">Unreal Engine · Metaverso</span>
+              <span class="work-media-badge" data-es="SaaS · Música" data-en="SaaS · Music">SaaS · Música</span>
             </div>
             <div class="work-body">
               <div class="work-header-row">
-                <h3 class="work-title">Daxenworld</h3>
+                <h3 class="work-title">MusicVerse</h3>
                 <span class="work-year">2024 →</span>
               </div>
-              <p class="work-desc"
-                 data-es="Metaverso de entretenimiento con mundos temáticos, avatar IA conversacional (Convai), MusicVerse (SaaS musical con beat sync), juegos y menús digitales. Unreal Engine, MetaHuman y pixel streaming."
-                 data-en="Entertainment metaverse with themed worlds, a conversational AI avatar (Convai), MusicVerse (music SaaS with beat sync), games and digital menus. Unreal Engine, MetaHuman and pixel streaming.">
-                Metaverso de entretenimiento con mundos temáticos, avatar IA conversacional (Convai), MusicVerse (SaaS musical con beat sync), juegos y menús digitales. Unreal Engine, MetaHuman y pixel streaming.
-              </p>
+              <p class="work-desc" data-es="SaaS para la escena musical: plataforma multiusuario para bandas y locales con perfiles, agenda de shows, métricas de redes sociales, motor de contenido y seis idiomas." data-en="SaaS for the music scene: multi-user platform for bands and venues with profiles, show calendar, social media metrics, a content engine and six languages.">SaaS para la escena musical: plataforma multiusuario para bandas y locales con perfiles, agenda de shows, métricas de redes sociales, motor de contenido y seis idiomas.</p>
               <div class="work-tech">
-                <span class="tech-tag">Unreal Engine 5</span>
-                <span class="tech-tag">MetaHuman</span>
-                <span class="tech-tag">Convai</span>
                 <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">i18n</span>
+                <span class="tech-tag">SaaS</span>
               </div>
               <div class="work-actions">
-                <a class="work-btn primary" href="https://daxenworld.com/" target="_blank" rel="noopener">
+                <a class="work-btn primary" href="https://musicverse.com.ar/" target="_blank" rel="noopener">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                   <span data-es="Ver proyecto" data-en="View project">Ver proyecto</span>
                 </a>
@@ -534,18 +616,14 @@
               <div class="work-media-cover work-cover-inteatro" aria-label="INTEATRO institutional site preview">
                 <div class="work-cover-tag">inteatro.gob.ar</div>
               </div>
-              <span class="work-media-badge" data-es="Web institucional" data-en="Institutional web">Web institucional</span>
+              <span class="work-media-badge" data-es="Forward Deployed · Gobierno" data-en="Forward Deployed · Government">Forward Deployed · Gobierno</span>
             </div>
             <div class="work-body">
               <div class="work-header-row">
                 <h3 class="work-title">INT — Instituto Nacional del Teatro</h3>
                 <span class="work-year">2025 →</span>
               </div>
-              <p class="work-desc"
-                 data-es="Plataforma institucional del Estado Nacional. Frontend, backend PHP/MySQL, API REST, visor de PDF, autenticación y panel de administración de actas."
-                 data-en="Argentine National Government institutional platform. Frontend, PHP/MySQL backend, REST API, PDF viewer, authentication and admin panel.">
-                Plataforma institucional del Estado Nacional. Frontend, backend PHP/MySQL, API REST, visor de PDF, autenticación y panel de administración de actas.
-              </p>
+              <p class="work-desc" data-es="Plataforma institucional del Estado Nacional, como único ingeniero integrado al organismo: relevamiento con áreas no técnicas, API REST, backend PHP/MySQL, visor de PDF, autenticación y panel de administración de actas." data-en="Argentine National Government institutional platform, as the sole engineer embedded with the agency: discovery with non-technical teams, REST API, PHP/MySQL backend, PDF viewer, authentication and an admin panel for official records.">Plataforma institucional del Estado Nacional, como único ingeniero integrado al organismo: relevamiento con áreas no técnicas, API REST, backend PHP/MySQL, visor de PDF, autenticación y panel de administración de actas.</p>
               <div class="work-tech">
                 <span class="tech-tag">PHP</span>
                 <span class="tech-tag">MySQL</span>
@@ -632,7 +710,7 @@
               <div class="work-actions">
                 <a class="work-btn primary" href="https://guardiansoftheball.com/es/" target="_blank" rel="noopener">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                  <span data-es="Ver demo" data-en="Watch demo">Ver Sitio</span>
+                  <span data-es="Ver sitio" data-en="Visit site">Ver sitio</span>
                 </a>
               </div>
             </div>
@@ -651,11 +729,7 @@
                 <h3 class="work-title" data-es="Comercio Independiente" data-en="Comercio Independiente">Comercio Independiente</h3>
                 <span class="work-year">2025</span>
               </div>
-              <p class="work-desc"
-                 data-es="Sitio web para comercios independientes con catálogo de productos, ficha de tienda, pasarela de pagos y experiencia responsive. Construido para potenciar la venta local y digitalizar comercios argentinos."
-                 data-en="Website for independent merchants with product catalog, store pages, checkout flow and responsive UX. Built to empower local sales and digitize small businesses in Argentina.">
-                Sitio web para comercios independientes con catálogo de productos, ficha de tienda, pasarela de pagos y experiencia responsive. Construido para potenciar la venta local y digitalizar comercios argentinos.
-              </p>
+              <p class="work-desc" data-es="Marketplace multivendedor para comercios independientes: catálogo, fichas de tienda, checkout y CoIn Wallet, una wallet propia con autenticación segura y recuperación de contraseña." data-en="Multi-vendor marketplace for independent merchants: catalogue, store pages, checkout and CoIn Wallet, its own wallet with secure authentication and password recovery.">Marketplace multivendedor para comercios independientes: catálogo, fichas de tienda, checkout y CoIn Wallet, una wallet propia con autenticación segura y recuperación de contraseña.</p>
               <div class="work-tech">
                 <span class="tech-tag">PHP</span>
                 <span class="tech-tag">MySQL</span>
@@ -671,40 +745,7 @@
             </div>
           </article>
 
-          <!-- 7. CoIn Wallet Login Page -->
-          <article class="work-card" data-tags="web finance">
-            <div class="work-media">
-              <div class="work-media-cover work-cover-kanban" aria-label="CoIn Wallet login preview">
-                <div class="work-cover-tag">coin-wallet/login</div>
-              </div>
-              <span class="work-media-badge" data-es="FinTech · Auth" data-en="FinTech · Auth">FinTech · Auth</span>
-            </div>
-            <div class="work-body">
-              <div class="work-header-row">
-                <h3 class="work-title" data-es="Login CoIn Wallet" data-en="CoIn Wallet Login">Login CoIn Wallet</h3>
-                <span class="work-year">2025</span>
-              </div>
-              <p class="work-desc"
-                 data-es="Página de acceso para la wallet de comercio independiente, con autenticación segura, recuperación de contraseña y transición hacia pagos digitales. UI cuidada para vendedores y clientes."
-                 data-en="Login page for the independent commerce wallet, with secure authentication, password recovery and a transition toward digital payments. Polished UI for merchants and customers.">
-                Página de acceso para la wallet de comercio independiente, con autenticación segura, recuperación de contraseña y transición hacia pagos digitales. UI cuidada para vendedores y clientes.
-              </p>
-              <div class="work-tech">
-                <span class="tech-tag">PHP</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Secure Login</span>
-                <span class="tech-tag">Responsive UI</span>
-              </div>
-              <div class="work-actions">
-                <a class="work-btn primary" href="https://www.comercioindependiente.com/coin-wallet/login.php" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                  <span data-es="Ver login" data-en="View login">Ver login</span>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 8. Jakks EPK -->
+          <!-- 7. Jakks EPK -->
           <article class="work-card" data-tags="web design">
             <div class="work-media">
               <div class="work-media-cover work-cover-jakks" aria-label="Jakks band EPK preview">
@@ -737,7 +778,7 @@
             </div>
           </article>
 
-          <!-- 9. Behance / Diseño -->
+          <!-- 8. Behance / Diseño -->
           <article class="work-card" data-tags="design">
             <div class="work-media">
               <div class="work-media-cover work-cover-behance" aria-label="Behance portfolio preview">
@@ -779,194 +820,115 @@
     </div>
 
     <!-- ========= EDUCATION ========= -->
-    <!-- Full-width too: same free sidebar column, more room for the cards -->
     <div class="section section-full">
-        <div class="section-label"><span class="section-label-num">07</span> <span data-es="Formación" data-en="Education">Formación</span></div>
+        <div class="section-label"><span class="section-label-num">06</span> <span data-es="Formación" data-en="Education">Formación</span></div>
         <h2 class="section-title">
           <span data-es="Estudios y" data-en="Education and">Estudios y</span>
           <em data-es="capacitación" data-en="training">capacitación</em>
         </h2>
 
         <div class="edu-grid">
-          <div class="edu-card">
-            <div class="edu-inst">Da Vinci</div>
-            <div class="edu-date">Ago 2024 →</div>
-            <div class="edu-topic" data-es="Técnico Superior en Diseño y Programación Web — cursando 3er cuatrimestre"
-                                   data-en="Higher Technician Degree in Web Design and Programming — 3rd semester in progress">
-              Técnico Superior en Diseño y Programación Web — cursando 3er cuatrimestre
-            </div>
+          <div class="edu-card edu-main">
+            <div class="edu-inst">Escuela Da Vinci</div>
+            <div class="edu-date" data-es="Ago 2024 — Actual" data-en="Aug 2024 — Present">Ago 2024 — Actual</div>
+            <div class="edu-topic" data-es="Técnico Superior en Diseño y Programación Web · en curso" data-en="Higher Technician Degree in Web Design and Programming · in progress">Técnico Superior en Diseño y Programación Web · en curso</div>
           </div>
 
           <div class="edu-card">
             <div class="edu-inst">Udemy</div>
-            <div class="edu-date">Ago 2023 — Oct 2023</div>
-            <div class="edu-topic" data-es="Figma avanzado y Laws of UX"
-                                   data-en="Advanced Figma and Laws of UX">Figma avanzado y Laws of UX</div>
+            <div class="edu-date" data-es="2023" data-en="2023">2023</div>
+            <div class="edu-topic" data-es="Figma avanzado y Laws of UX" data-en="Advanced Figma and Laws of UX">Figma avanzado y Laws of UX</div>
           </div>
 
           <div class="edu-card">
             <div class="edu-inst">Pirple</div>
-            <div class="edu-date">Nov 2021 — Dic 2021</div>
-            <div class="edu-topic">Swift · ECMAScript 6 · Python</div>
+            <div class="edu-date" data-es="2021" data-en="2021">2021</div>
+            <div class="edu-topic" data-es="Python · ECMAScript 6 · Swift" data-en="Python · ECMAScript 6 · Swift">Python · ECMAScript 6 · Swift</div>
           </div>
 
           <div class="edu-card">
             <div class="edu-inst">Coderhouse</div>
-            <div class="edu-date">Abr 2021 — Jul 2021</div>
-            <div class="edu-topic" data-es="UX/UI Design"
-                                   data-en="UX/UI Design">UX/UI Design</div>
+            <div class="edu-date" data-es="2021" data-en="2021">2021</div>
+            <div class="edu-topic" data-es="UX/UI Design" data-en="UX/UI Design">UX/UI Design</div>
           </div>
 
           <div class="edu-card">
-            <div class="edu-inst">Da Vinci</div>
-            <div class="edu-date">Abr 2015 — Oct 2015</div>
-            <div class="edu-topic" data-es="Web y Mobile Responsive · Photoshop"
-                                   data-en="Web & Mobile Responsive · Photoshop">Web y Mobile Responsive · Photoshop</div>
-          </div>
-
-          <div class="edu-card">
-            <div class="edu-inst" data-es="Facultad de Ciencias Económicas UBA"
-                                  data-en="UBA School of Economics">Facultad de Ciencias Económicas UBA</div>
-            <div class="edu-date">Mar 2012 — Abr 2012</div>
-            <div class="edu-topic" data-es="Marketing online para Facebook"
-                                   data-en="Online marketing for Facebook">Marketing online para Facebook</div>
-          </div>
-
-          <div class="edu-card">
-            <div class="edu-inst">Da Vinci</div>
-            <div class="edu-date">Sep 2011 — Dic 2011</div>
-            <div class="edu-topic">After Effects</div>
-          </div>
-
-          <div class="edu-card">
-            <div class="edu-inst">IAC Argentina</div>
-            <div class="edu-date">Mar 2006 — Oct 2006</div>
-            <div class="edu-topic" data-es="Diseño Web"
-                                   data-en="Web Design">Diseño Web</div>
-          </div>
-
-          <div class="edu-card">
-            <div class="edu-inst" data-es="Inst. Calasancio Divina Pastora"
-                                  data-en="Calasancio Divina Pastora Inst.">Inst. Calasancio Divina Pastora</div>
-            <div class="edu-date">Mar 1998 — Nov 2002</div>
-            <div class="edu-topic" data-es="Bachillerato — Educación Secundaria"
-                                   data-en="High School Diploma">Bachillerato — Educación Secundaria</div>
+            <div class="edu-inst">Escuela Da Vinci</div>
+            <div class="edu-date" data-es="2015" data-en="2015">2015</div>
+            <div class="edu-topic" data-es="Web y Mobile Responsive" data-en="Web & Mobile Responsive">Web y Mobile Responsive</div>
           </div>
         </div>
     </div>
 
     <!-- ========= REFERENCES ========= -->
-    <!-- Full-width too, same reason as 06/07 -->
     <div class="section section-full">
-        <div class="section-label"><span class="section-label-num">08</span> <span data-es="Referencias" data-en="References">Referencias</span></div>
+        <div class="section-label"><span class="section-label-num">07</span> <span data-es="Referencias" data-en="References">Referencias</span></div>
         <h2 class="section-title">
           <span data-es="Personas que" data-en="People who">Personas que</span>
           <em data-es="responden" data-en="vouch">responden</em>
         </h2>
+        <p class="ref-note" data-es="Datos de contacto disponibles a pedido, durante el proceso de selección." data-en="Contact details available on request during the hiring process.">Datos de contacto disponibles a pedido, durante el proceso de selección.</p>
 
         <div class="ref-grid">
           <div class="ref-card">
             <div class="ref-company">Guardians of the Ball</div>
             <div class="ref-name">Alan Cura</div>
-            <div class="ref-role">CEO</div>
-            <div class="ref-contact">
-              <a href="mailto:alan@guardiansoftheball.com">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                alan@guardiansoftheball.com
-              </a>
-              <a href="tel:+34618279267">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                +34 618 279 267
-              </a>
-            </div>
-          </div>
-
-          <div class="ref-card">
-            <div class="ref-company">Escuela Da Vinci</div>
-            <div class="ref-name">Alejandro Martínez Casás</div>
-            <div class="ref-role" data-es="Director de Estudio"
-                                  data-en="Studio Director">Director de Estudio</div>
-            <div class="ref-contact">
-              <a href="mailto:alejandro.martinezcasas@davinci.edu.ar">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                alejandro.martinezcasas@davinci.edu.ar
-              </a>
-            </div>
-          </div>
-
-          <div class="ref-card">
-            <div class="ref-company">Educación IT</div>
-            <div class="ref-name">Mailen Badoza</div>
-            <div class="ref-role" data-es="SR HR Analyst · Teacher specialist"
-                                  data-en="SR HR Analyst · Teacher specialist">SR HR Analyst · Teacher specialist</div>
-            <div class="ref-contact">
-              <a href="mailto:mailen.badoza@educacionit.com">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                mailen.badoza@educacionit.com
-              </a>
-            </div>
+            <div class="ref-role" data-es="CEO" data-en="CEO">CEO</div>
           </div>
 
           <div class="ref-card">
             <div class="ref-company">Seabury Solutions</div>
             <div class="ref-name">Frida Nilsson</div>
-            <div class="ref-role" data-es="Project Lead"
-                                  data-en="Project Lead">Project Lead</div>
-            <div class="ref-contact">
-              <a href="mailto:fnilsson@seaburysolutions.com">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                fnilsson@seaburysolutions.com
-              </a>
-              <a href="tel:+5493512289265">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                +54 9 351 228 9265
-              </a>
-            </div>
+            <div class="ref-role" data-es="Project Lead" data-en="Project Lead">Project Lead</div>
+          </div>
+
+          <div class="ref-card">
+            <div class="ref-company">Escuela Da Vinci</div>
+            <div class="ref-name">Alejandro Martínez Casás</div>
+            <div class="ref-role" data-es="Director de Estudio" data-en="Studio Director">Director de Estudio</div>
+          </div>
+
+          <div class="ref-card">
+            <div class="ref-company">Educación IT</div>
+            <div class="ref-name">Mailen Badoza</div>
+            <div class="ref-role" data-es="SR HR Analyst · Teacher specialist" data-en="SR HR Analyst · Teacher specialist">SR HR Analyst · Teacher specialist</div>
           </div>
 
           <div class="ref-card">
             <div class="ref-company">Someco</div>
             <div class="ref-name">Facundo Méndez Collado</div>
-            <div class="ref-role" data-es="Manager"
-                                  data-en="Manager">Manager</div>
-            <div class="ref-contact">
-              <a href="mailto:fmendez@someco.com.ar">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                fmendez@someco.com.ar
-              </a>
-              <a href="tel:+541168173540">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                11 6817 3540
-              </a>
-            </div>
+            <div class="ref-role" data-es="Manager" data-en="Manager">Manager</div>
           </div>
 
           <div class="ref-card">
             <div class="ref-company">Tío Musa</div>
             <div class="ref-name">Alberto Chaia</div>
-            <div class="ref-role" data-es="Director comercial"
-                                  data-en="Sales Director">Director comercial</div>
-            <div class="ref-contact">
-              <a href="mailto:ventas@tiomusa.com.ar">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                ventas@tiomusa.com.ar
-              </a>
-              <a href="tel:+541146323333">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                11 4632 3333
-              </a>
-            </div>
+            <div class="ref-role" data-es="Director comercial" data-en="Sales Director">Director comercial</div>
           </div>
         </div>
     </div>
 
   </div>
 
+  <!-- ========= CONTACT CTA ========= -->
+  <section class="contact-cta print-hide">
+    <div class="section-label"><span class="section-label-num">08</span> <span data-es="Contacto" data-en="Contact">Contacto</span></div>
+    <h2 class="contact-title">
+      <span data-es="¿Hay un problema de cliente para resolver?" data-en="Got a customer problem to solve?">¿Hay un problema de cliente para resolver?</span>
+      <em data-es="Hablemos." data-en="Let's talk.">Hablemos.</em>
+    </h2>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="mailto:alemichelis84@gmail.com">alemichelis84@gmail.com</a>
+      <a class="btn" href="https://linkedin.com/in/alejandromichelis/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" data-cv-link href="Alejandro-Michelis-CV-ES.pdf" download data-es="Descargar CV (PDF)" data-en="Download CV (PDF)">Descargar CV (PDF)</a>
+    </div>
+  </section>
+
   <!-- ========= FOOTER ========= -->
   <footer class="footer print-hide">
     <div>
       © 2026 Alejandro Michelis —
-      <span data-es="Currículum online · Versión" data-en="Online CV · Version">Currículum online · Versión</span> 1.0
+      <span data-es="Currículum online · Versión" data-en="Online CV · Version">Currículum online · Versión</span> 2.0
     </div>
     <div>
       <span data-es="Diseñado y construido por mí mismo."
