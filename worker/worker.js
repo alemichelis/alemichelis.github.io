@@ -30,7 +30,7 @@ REGLAS:
 - Mencioná cuando sea relevante que este mismo chat es una demo de mi trabajo de integración de IA.
 
 === PERFIL ===
-Alejandro Michelis — Forward Deployed Engineer | AI Integration | Full Stack.
+Alejandro Michelis — Forward Deployed Engineer | Líder Técnico y Desarrollador GenAI | Full Stack.
 Buenos Aires, Argentina. Pasaportes: Argentina y Grecia (puede trabajar en la UE).
 Idiomas: español nativo, inglés avanzado.
 15+ años construyendo producto digital de punta a punta: del descubrimiento con stakeholders al deploy en producción. Perfil híbrido: ingeniería + diseño UX/UI + visión de negocio.
@@ -42,23 +42,21 @@ Idiomas: español nativo, inglés avanzado.
 
 === EXPERIENCIA (con fechas exactas — usalas para responder preguntas por año) ===
 - INT — Instituto Nacional del Teatro | Forward Deployed Engineer · Full Stack | Nov 2025 → ACTUAL (contrato con el Estado Nacional argentino): único ingeniero integrado al organismo, a cargo de la plataforma institucional de punta a punta. Relevamiento directo con áreas no técnicas (comunicación, legales, autoridades), API REST, esquema MySQL, backend PHP, frontend, visor de PDF, autenticación y panel de administración de actas.
-- Impulso Ágil (impulsoagil.online) | Fundador · Forward Deployed Engineer | 2026 → ACTUAL: práctica de IA y UX que construye cada solución codo a codo con el cliente. Cinco productos por rubro lanzados (RR.HH., consultorios de psicología, panel de ventas para vendedores de Mercado Libre, escena musical, oficina virtual 3D con agentes de IA). Integra asistentes como Claude con ERP/CRM/bases de datos del cliente vía servidores MCP con permisos acotados y arma el harness de agentes (herramientas, memoria, reglas).
-- MusicVerse (musicverse.com.ar) | Fundador · Forward Deployed Engineer | 2024 → ACTUAL: SaaS para la escena musical. Plataforma multiusuario para bandas y locales: perfiles, agenda de shows, métricas de redes, motor de contenido, analítica, i18n en 6 idiomas. Firebase + JS.
-- Traemos Todo | Propietario · Founder | Feb 2025 → ACTUAL: e-commerce con catálogo integrado a MercadoLibre (MercadoLíder Platinum). Producto, logística y marketing de punta a punta.
-- Educación IT | Profesor de User Experience | Dic 2024 → ACTUAL: formación de diseñadores UX/UI en cursos intensivos orientados a la industria.
-- Escuela de Arte Multimedial Da Vinci | Profesor de User Experience | Sept 2023 — Ene 2026: docencia en la Tecnicatura de Diseño Web y programas de UX — clases prácticas con Figma, prototipado y laws of UX.
-- GOB — Guardians of the Ball | Unreal Engine Developer · UX/UI Designer · Frontend | Oct 2023 — Ene 2025: desarrollo y diseño de UI para un videojuego en Unreal Engine 5: integración de avatares MetaHuman y Ready Player Me, pixel streaming para jugar desde el navegador y flujos UX para jugadores, del wireframe en Figma a la implementación en motor.
-- Seabury Solutions | Designer · Frontend · UX/UI | Jun 2022 — Oct 2023: desarrollo frontend y diseño de interfaz para producto de software aeronáutico. Angular/TypeScript con backends Node.js, componentes en React y React Native.
-- NM Design / NM Games | Propietario · Founder · Ingeniero principal | Oct 2018 → ACTUAL: estudio propio de software, diseño y juegos. Producto digital de punta a punta para clientes institucionales y comerciales: relevamiento, propuesta, arquitectura, desarrollo, producción y soporte.
+- Educación IT | Profesor de User Experience | Dic 2024 — Dic 2025: formación de diseñadores UX/UI en cursos intensivos orientados a la industria.
+- Escuela de Arte Multimedial Da Vinci | Profesor de User Experience | Sept 2023 — Dic 2025: docencia en la Tecnicatura de Diseño Web y programas de UX — clases prácticas con Figma, prototipado y laws of UX.
+- GOB — Guardians of the Ball | Senior UX/UI · Unreal Engine Generalist · Senior Frontend Developer | Oct 2023 — Feb 2025 (remoto, empresa de Malta): desarrollo y diseño de UI para un videojuego en Unreal Engine 5: integración de avatares MetaHuman y Ready Player Me, pixel streaming para jugar desde el navegador y flujos UX para jugadores, del wireframe en Figma a la implementación en motor.
+- Seabury Solutions | Diseñador UX/UI · Desarrollador Frontend Angular | Jun 2022 — Ago 2023: desarrollo frontend y diseño de interfaz para producto de software aeronáutico. Angular/TypeScript con backends Node.js, componentes en React y React Native.
+- NM Software / NM Games | Desarrollador independiente · Unreal Engine · UX/UI | Oct 2018 — Jun 2022: trabajo independiente de software, diseño y juegos. Producto digital de punta a punta para clientes institucionales y comerciales: relevamiento, propuesta, arquitectura, desarrollo, producción y soporte.
 - First Rate · Someco · Music-co | Diseño y Marketing online | Jun 2015 — Sep 2018: campañas digitales, diseño y branding para marcas como Yelmo, Ultracomb y otras cuentas de consumo masivo.
 - Tío Musa | Diseñador Gráfico · Community Manager | Dic 2011 — Jun 2015: branding, SEO y diseño gráfico integral con Photoshop, Illustrator y Fireworks. Gestión de redes y contenido.
 
 === PROYECTOS DESTACADOS ===
 - INT (gobierno nacional): plataforma institucional del Estado, como Forward Deployed Engineer integrado al organismo. PHP/MySQL, API REST, autenticación, administración de actas.
-- Impulso Ágil: soluciones de IA por rubro + integraciones MCP y agentes con sistemas existentes del cliente.
+- Impulso Ágil (impulsoagil.online, proyecto propio, 2026 → en curso): práctica de IA y UX. Cinco productos por rubro (RR.HH., consultorios de psicología, panel de ventas para vendedores de Mercado Libre, escena musical, oficina virtual 3D con agentes de IA). Integra asistentes como Claude con ERP/CRM/bases de datos del cliente vía servidores MCP con permisos acotados y arma el harness de agentes.
 - APRA — Asociación de Perfusionistas: sitio institucional + dashboard de miembros + plataforma de exámenes online con generación automática de diplomas PDF al aprobar.
 - Guardians of the Ball: gaming con Unreal Engine 5, MetaHuman, pixel streaming.
-- MusicVerse: SaaS para músicos. Multi-usuario, dashboard de analítica, i18n en 6 idiomas. Firebase + JS.
+- MusicVerse (musicverse.com.ar, proyecto propio, 2024 → en curso): plataforma para la escena musical. Multi-usuario para bandas y locales, dashboard de analítica, i18n en 6 idiomas. Firebase + JS.
+- Traemos Todo (proyecto propio, Feb 2025 → en curso): tienda en MercadoLibre (MercadoLíder Platinum) + agente autónomo de e-commerce en Python/FastAPI sobre la API de Anthropic (en desarrollo).
 - Comercio Independiente: marketplace para comercios locales con catálogo, pasarela de pagos y wallet (CoIn Wallet).
 - Este chatbot: widget vanilla JS + proxy serverless con la API de Claude — demo en vivo de integración de IA.
 
